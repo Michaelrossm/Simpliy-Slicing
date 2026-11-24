@@ -1,0 +1,70 @@
+name: Publish third-party MPL source archives
+on:
+  push:
+    paths:
+      - ".github/workflows/publish-oss-sources.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-mpl-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify complete upstream MPL source crates
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, tarfile, urllib.request, zipfile
+          from pathlib import Path
+
+          tag = "0.0.0-alpha.1"
+          packages = [
+              ("cssparser", "0.37.0"),
+              ("cssparser-macros", "0.7.1"),
+              ("dtoa-short", "0.3.5"),
+              ("option-ext", "0.2.0"),
+              ("selectors", "0.38.0"),
+          ]
+          target = Path(f"Simpliy-Slicing-{tag}-MPL-Sources.zip")
+          hashes = []
+          manifest = []
+          def download(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "Simpliy-Slicing-OSS-Source-Packager/1.0"})
+              with urllib.request.urlopen(req, timeout=50) as response:
+                  return response.read()
+
+          license_text = download("https://raw.githubusercontent.com/spdx/license-list-data/main/text/MPL-2.0.txt")
+          assert b"Mozilla Public License" in license_text, "MPL license text not verified"
+          with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
+              archive.writestr("LICENSES/MPL-2.0.txt", license_text)
+              archive.write("OPEN-SOURCE-QUELLCODE.md", "README.md")
+              for name, version in packages:
+                  filename = f"{name}-{version}.crate"
+                  url = f"https://static.crates.io/crates/{name}/{filename}"
+                  data = download(url)
+                  assert len(data) > 500, f"Download too small: {filename}"
+                  import io
+                  with tarfile.open(fileobj=io.BytesIO(data), mode="r:gz") as source:
+                      members = source.getmembers()
+                      assert any(m.isfile() and (m.name.endswith(".rs") or "/src/" in m.name) for m in members), f"No source found in {filename}"
+                      assert len(members) > 2, f"Invalid crate: {filename}"
+                  digest = hashlib.sha256(data).hexdigest()
+                  archive.writestr("MPL-CRATES/" + filename, data, compress_type=zipfile.ZIP_STORED)
+                  hashes.append(f"{digest}  MPL-CRATES/{filename}")
+                  manifest.append({"package":name, "version":version, "source_url":url, "sha256":digest, "license":"MPL-2.0"})
+              archive.writestr("SHA256SUMS.txt", "\n".join(hashes) + "\n")
+              archive.writestr("manifest.json", json.dumps(manifest, indent=2) + "\n")
+          print("Wrote", target, "with", len(manifest), "complete source crate archives")
+          PY
+      - name: Attach sources to existing public Alpha release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release view v0.0.0-alpha.1 --repo "$GITHUB_REPOSITORY"
+          gh release upload v0.0.0-alpha.1 Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip --repo "$GITHUB_REPOSITORY" --clobber
+          gh release view v0.0.0-alpha.1 --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name'
