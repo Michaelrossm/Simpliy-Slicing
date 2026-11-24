@@ -4,7 +4,7 @@
 
 **Prepare models, design supports, and inspect toolpaths — in one Windows application.** Simpliy Slicing combines its own user interface with the separately installed PrusaSlicer slicing engine. This project is at an early alpha stage.
 
-[**Download Windows alpha**](../../releases/tag/v0.0.0-alpha.1) · [All releases](../../releases) · [User guide](ANLEITUNG_EN.md) · [Illustrated first-time setup](ersteinrichtung/README_EN.md) · [Report an issue](../../issues)
+[**Download Windows alpha**](../../releases/tag/v0.0.0-alpha.1) · [English release notes](RELEASE_NOTES_EN.md) · [All releases](../../releases) · [User guide](ANLEITUNG_EN.md) · [Illustrated first-time setup](ersteinrichtung/README_EN.md) · [Report an issue](../../issues)
 
 **Open-source sources for MPL-2.0 dependencies:** [Download the source archive](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Dependencies and licensing notes](OPEN-SOURCE-QUELLCODE_EN.md). Simpliy's own proprietary source code is not included.
 
