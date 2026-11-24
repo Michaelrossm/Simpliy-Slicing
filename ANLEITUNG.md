@@ -15,7 +15,7 @@ Simpliy verwendet PrusaSlicer im Hintergrund als separaten Prozess. Eine kompati
 
 Für die vollständige bebilderte Ersteinrichtung siehe die [Schritt-für-Schritt-Anleitung](https://github.com/Michaelrossm/Simpliy-Slicing/tree/main/ersteinrichtung). Sie zeigt Engine, Basisprofil, Druckerverwaltung und die Druckereinstellungen anhand eines Erststarts.
 
-Wähle einen vorhandenen Drucker und ein zum Drucker passendes Materialprofil oder lege eigene Einstellungen an. Kontrolliere insbesondere Druckbettgröße, Bauhöhe, Düsendurchmesser, Firmware- und G-Code-Typ sowie Start- und Endbefehle. Prüfe die Temperatur und den Filamentdurchmesser anhand deines tatsächlichen Druckers und Materials. Die angezeigten Profiloptionen hängen von der installierten Engine und deren Profilen ab.
+**Drucker und Filament beziehungsweise Material müssen beide ausgewählt sein. Fehlt eine dieser Auswahlen, ist Slicen nicht möglich.** Wähle einen vorhandenen Drucker und ein zum Drucker passendes Materialprofil oder lege eigene Einstellungen an. Kontrolliere insbesondere Druckbettgröße, Bauhöhe, Düsendurchmesser, Firmware- und G-Code-Typ sowie Start- und Endbefehle. Prüfe die Temperatur und den Filamentdurchmesser anhand deines tatsächlichen Druckers und Materials. Die angezeigten Profiloptionen hängen von der installierten Engine und deren Profilen ab.
 
 ## 3. Modell importieren und positionieren
 
@@ -85,7 +85,7 @@ Die Kombination eigener und automatischer Stützen wird beim Slicing geprüft. S
 
 ## 6. Slicen und Vorschau prüfen
 
-Klicke auf **Jetzt slicen**. Das Programm bereitet das Ergebnis zunächst vor; dabei wird noch kein endgültiger Speicherort abgefragt. Status und eventuelle Warnungen beachten.
+Prüfe zuerst, dass im Prozess sowohl ein Drucker als auch ein Filament beziehungsweise Material ausgewählt sind. Fehlt eine Auswahl, kann nicht gesliced werden. Klicke danach auf **Jetzt slicen**. Das Programm bereitet das Ergebnis zunächst vor; dabei wird noch kein endgültiger Speicherort abgefragt. Status und eventuelle Warnungen beachten.
 
 In der G-Code-Vorschau kannst du den Schichtbereich eingrenzen und Werkzeugwege beziehungsweise Farben auswählen. Die aktuelle Schicht wird hervorgehoben. Prüfe besonders erste Schicht, Überhänge, Stützen, Kontaktstellen, Fahrwege und die geschätzten Druckwerte. Mit **Vorschaumodus verlassen** oder dem Modell-Reiter kehrst du zur Bearbeitung zurück; nach Änderungen erneut slicen.
 

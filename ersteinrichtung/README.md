@@ -8,6 +8,8 @@ Aufgenommen am 24.11.2026 mit 0.0.0-alpha.1 bei einem echten Erststart (leerer D
 
 Beim ersten Start ist ein Beispielprozess geladen. Unten rechts steht **„Kein Basisprofil“**: Zum Slicen fehlt noch die Grundlage.
 
+> **Erforderlich:** Wähle im Prozess einen Drucker und ein Filament beziehungsweise Material aus. Fehlt eines von beiden, ist Slicen nicht möglich.
+
 ## 2. Slicing-Engine prüfen (Hilfe › Slicing-Engine)
 
 ![Engine](bilder/03-engine.png)
@@ -48,12 +50,12 @@ Im Prozess neben dem Feld „Drucker“ auf **…** klicken.
 1. **+ Drucker** klicken.
 2. Unter **Druckername** einen Namen eintragen, z. B. „Mein Drucker“.
 3. **Anzahl Werkzeuge** einstellen.
-4. Optional die freigegebenen Materialien und das Standardmaterial wählen.
+4. Die freigegebenen Materialien und ein Standardmaterial kannst du hier festlegen. Für das Slicen muss anschließend im Prozess ein Filament beziehungsweise Material ausgewählt sein.
 5. **Speichern** und dann **Schließen** klicken.
 
 ![Neuer Drucker](bilder/10-neuer-drucker.png)
 
-Danach im Prozess oben bei **Drucker** deinen neuen Drucker auswählen.
+Danach im Prozess oben bei **Drucker** deinen neuen Drucker auswählen und bei **Auto-Konfiguration für Material** das gewünschte Filament beziehungsweise Material wählen. **Beide Auswahlen sind für das Slicen erforderlich.**
 
 ## 6. Druckerwerte im Prozess einstellen
 
@@ -84,7 +86,7 @@ Danach diese Reiter durchgehen:
 ![Modell](bilder/14-modell.png)
 
 1. **Modell importieren** klicken und eine STL- oder 3MF-Datei wählen.
-2. Oben im Prozess die Auto-Konfiguration wählen: Material, Schichthöhe und Ergänzungen.
+2. Im Prozess prüfen, dass **Drucker und Filament beziehungsweise Material ausgewählt** sind. Fehlt eines davon, kann nicht gesliced werden. Danach Schichthöhe und Ergänzungen wählen.
 3. Links auf **Jetzt slicen** klicken.
 
 ![Ergebnis](bilder/15-gesliced.png)
