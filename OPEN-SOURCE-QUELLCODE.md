@@ -1,5 +1,7 @@
 # Quellcode und Lizenzen der weiterverbreiteten Open-Source-Abhängigkeiten
 
+[**Deutsch 🇩🇪**](OPEN-SOURCE-QUELLCODE.md) · [**English 🇬🇧**](OPEN-SOURCE-QUELLCODE_EN.md)
+
 ## Simpliy Slicing 0.0.0-alpha.1
 
 Simpliy Slicing verwendet Bibliotheken mit verschiedenen Open-Source-Lizenzen.
