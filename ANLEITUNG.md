@@ -1,4 +1,4 @@
-﻿# Simpliy Slicing – Bedienungsanleitung für Windows
+# Simpliy Slicing – Bedienungsanleitung für Windows
 
 Diese Anleitung beschreibt die frühe Alpha-Version **0.0.0-alpha.1**. Oberfläche und Funktionen können sich in späteren Versionen ändern.
 
@@ -22,15 +22,39 @@ Wähle einen vorhandenen Drucker und ein zum Drucker passendes Materialprofil od
 3. Prüfe, ob das Modell innerhalb des Druckvolumens liegt und die gewünschte Seite auf dem Druckbett steht. Weitere Modelle lassen sich auf derselben oder auf einer weiteren Platte organisieren.
 4. Speichere deinen Arbeitsstand über die Projektfunktion, bevor du größere Änderungen vornimmst.
 
+![Modellansicht mit Stützwerkzeug](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/knotenbleche.png)
+
+*Modellliste links, Druckplatte in der Mitte und Stützwerkzeug rechts.*
+
 ## 4. Prozesse und Einstellungen
 
 Ein Prozess fasst Druckeinstellungen zusammen. Wähle links einen Prozess aus und öffne **Prozesseinstellungen bearbeiten**. Dort findest du Register für Extruder, Schicht, Wände, Füllung, Stützen, Temperatur, Kühlung, Geschwindigkeit, Drucker und Skripte.
 
 Über **Modelle auswählen** kannst du die Zuordnung zum Prozess bearbeiten. Änderungen gelten zunächst für den Prozess; verwende **Prozess speichern**, wenn du eine Konfiguration dauerhaft ablegen möchtest. Benutzerdefinierte Zonen sind in dieser Alpha noch in Entwicklung.
 
+![Extrudereinstellungen im Prozessdialog](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/extruder.png)
+
+*Prozessdialog mit Extruder- und Einzugseinstellungen.*
+
+![Temperatureinstellungen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/temperaturen.png)
+
+*Temperaturvorgaben für die erste und die folgenden Schichten.*
+
 ### Auto-Konfiguration
 
 Mit Auto-Konfigurationen kannst du zusammengehörige Einstellungen beispielsweise für Material oder Schichthöhe wählen. Im Zuweisungsdialog legst du fest, welche Kategorie einen Parameter steuert. Offset-Regeln können Werte abhängig von einer gewählten Option für das Slicing verändern. Überprüfe die angezeigten resultierenden Werte, bevor du slicest.
+
+![Zuweisung der Auto-Konfiguration](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/auto-zuweisung.png)
+
+*Hier ordnest du Einstellungen einer Auto-Konfigurationskategorie zu.*
+
+![Auto-Konfiguration und Optionen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/auto-konfiguration.png)
+
+*Im Prozessdialog lassen sich Kategorien und Optionen bearbeiten.*
+
+![Auto-Konfigurations-Offsets](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/auto-offset.png)
+
+*Offset-Regeln und die daraus resultierenden Werte.*
 
 ## 5. Stützen vorbereiten
 
@@ -41,11 +65,31 @@ Mit Auto-Konfigurationen kannst du zusammengehörige Einstellungen beispielsweis
 
 Die Kombination eigener und automatischer Stützen wird beim Slicing geprüft. Schutzbereiche können die automatische Erzeugung lokal einschränken. Wenn die Prüfung fehlschlägt oder nicht möglich ist, kann Simpliy mit Hinweis auf einen sicheren Rückfall wechseln. Für diese Kombination **Text-G-Code** verwenden. Prüfe auch dann die Kontaktbereiche in der Vorschau; eine Prüfung ersetzt keinen Testdruck.
 
+![Pfeilerstützen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/pfeiler.png)
+
+*Beispiel für gerade Pfeilerstützen.*
+
+![Baumstützen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/stuetzen.png)
+
+*Beispiel für Baumstützen mit verzweigten Kontaktstellen.*
+
+![Fächerstützen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/faecher.png)
+
+*Beispiel für Fächerstützen.*
+
+![Knotenblechstützen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/knotenbleche.png)
+
+*Das Stützwerkzeug mit Einstellungen und Knotenblech-Beispiel.*
+
 ## 6. Slicen und Vorschau prüfen
 
 Klicke auf **Jetzt slicen**. Das Programm bereitet das Ergebnis zunächst vor; dabei wird noch kein endgültiger Speicherort abgefragt. Status und eventuelle Warnungen beachten.
 
 In der G-Code-Vorschau kannst du den Schichtbereich eingrenzen und Werkzeugwege beziehungsweise Farben auswählen. Die aktuelle Schicht wird hervorgehoben. Prüfe besonders erste Schicht, Überhänge, Stützen, Kontaktstellen, Fahrwege und die geschätzten Druckwerte. Mit **Vorschaumodus verlassen** oder dem Modell-Reiter kehrst du zur Bearbeitung zurück; nach Änderungen erneut slicen.
+
+![G-Code-Vorschau](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/vorschau.png)
+
+*Die farbige Vorschau mit Schichtreglern und Build-Zusammenfassung.*
 
 ## 7. G-Code speichern oder hochladen
 
@@ -54,6 +98,14 @@ Nach erfolgreichem Slicing **G-Code speichern** wählen und den gewünschten Spe
 ## 8. Querschnitt und weitere Werkzeuge
 
 Mit **Querschnitt** lässt sich eine Schnittebene zur Ansicht aktivieren und verschieben, um Modell und Stützen von innen zu betrachten. Die Anzeige verändert das Modell dabei nicht. Weitere Werkzeuge stehen je nach aktuellem Entwicklungsstand in der rechten Leiste zur Verfügung; angezeigte oder deaktivierte Funktionen sind nicht automatisch für jeden Anwendungsfall vollständig geprüft.
+
+![Querschnittsansicht](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/querschnitt.png)
+
+*Die Schnittebene zeigt den Innenbereich von Modell und Stützen.*
+
+![Bemalen von Modellbereichen](https://raw.githubusercontent.com/Michaelrossm/Simpliy-Slicing/main/bilder/bemalen.png)
+
+*Beispiel für die Markierung von Modellbereichen mit dem Malwerkzeug.*
 
 ## 9. Hilfe bei Problemen
 
