@@ -4,6 +4,8 @@
 
 [**Windows-Alpha herunterladen**](../../releases/tag/v0.0.0-alpha.1) · [Alle Releases](../../releases) · [Bedienungsanleitung](ANLEITUNG.md) · [Ersteinrichtung mit Bildern](ersteinrichtung/) · [Fehler melden](../../issues)
 
+**Open-Source-Quelltexte der MPL-2.0-Abhängigkeiten:** [Quellcode-Archiv herunterladen](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Komponenten und Hinweise](OPEN-SOURCE-QUELLCODE.md). Der eigene Simpliy-Quellcode wird nicht mitgeliefert.
+
 ![G-Code-Vorschau mit Modell und Stützen](bilder/vorschau.png)
 
 ## Was kann Simpliy Slicing?
