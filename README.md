@@ -1,5 +1,7 @@
 # Simpliy Slicing
 
+[**Deutsch 🇩🇪**](README.md) · [**English 🇬🇧**](README_EN.md)
+
 **Modelle vorbereiten, Stützen gestalten und Druckbahnen kontrollieren – in einer Windows-Anwendung.** Simpliy Slicing kombiniert eine eigene Oberfläche mit der separat installierten Slicing-Engine von PrusaSlicer. Das Projekt befindet sich in einer frühen Alpha-Phase.
 
 [**Windows-Alpha herunterladen**](../../releases/tag/v0.0.0-alpha.1) · [Alle Releases](../../releases) · [Bedienungsanleitung](ANLEITUNG.md) · [Ersteinrichtung mit Bildern](ersteinrichtung/) · [Fehler melden](../../issues)
