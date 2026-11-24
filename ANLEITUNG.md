@@ -1,5 +1,7 @@
 # Simpliy Slicing – Bedienungsanleitung für Windows
 
+[**Deutsch 🇩🇪**](ANLEITUNG.md) · [**English 🇬🇧**](ANLEITUNG_EN.md)
+
 Diese Anleitung beschreibt die frühe Alpha-Version **0.0.0-alpha.1**. Oberfläche und Funktionen können sich in späteren Versionen ändern.
 
 ## 1. Installieren und starten
