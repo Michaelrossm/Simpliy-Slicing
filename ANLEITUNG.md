@@ -13,6 +13,8 @@ Simpliy verwendet PrusaSlicer im Hintergrund als separaten Prozess. Eine kompati
 
 ## 2. Drucker und Material einrichten
 
+Für die vollständige bebilderte Ersteinrichtung siehe die [Schritt-für-Schritt-Anleitung](https://github.com/Michaelrossm/Simpliy-Slicing/tree/main/ersteinrichtung). Sie zeigt Engine, Basisprofil, Druckerverwaltung und die Druckereinstellungen anhand eines Erststarts.
+
 Wähle einen vorhandenen Drucker und ein zum Drucker passendes Materialprofil oder lege eigene Einstellungen an. Kontrolliere insbesondere Druckbettgröße, Bauhöhe, Düsendurchmesser, Firmware- und G-Code-Typ sowie Start- und Endbefehle. Prüfe die Temperatur und den Filamentdurchmesser anhand deines tatsächlichen Druckers und Materials. Die angezeigten Profiloptionen hängen von der installierten Engine und deren Profilen ab.
 
 ## 3. Modell importieren und positionieren
