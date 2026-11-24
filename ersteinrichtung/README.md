@@ -1,5 +1,7 @@
 # Simpliy Slicing – Ersteinrichtung Schritt für Schritt
 
+[**Deutsch 🇩🇪**](README.md) · [**English 🇬🇧**](README_EN.md)
+
 Aufgenommen am 24.11.2026 mit 0.0.0-alpha.1 bei einem echten Erststart (leerer Datenordner).
 
 ## 1. Erster Start
