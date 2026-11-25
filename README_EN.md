@@ -6,7 +6,7 @@
 
 [**Download Windows alpha**](../../releases/tag/v0.0.0-alpha.1) · [English release notes](RELEASE_NOTES_EN.md) · [All releases](../../releases) · [User guide](ANLEITUNG_EN.md) · [Illustrated first-time setup](ersteinrichtung/README_EN.md) · [Report an issue](../../issues)
 
-**Open-source sources for MPL-2.0 dependencies:** [Download the source archive](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Dependencies and licensing notes](OPEN-SOURCE-QUELLCODE_EN.md). Simpliy's own proprietary source code is not included.
+**Alpha 1 source code:** [Download Simpliy sources](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-Source.zip) · [Browse the Alpha 1 source snapshot](../../tree/alpha1-source-snapshot/alpha1-source). [MPL-2.0 dependency sources](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Licensing notes](OPEN-SOURCE-QUELLCODE_EN.md). Publishing the source does not automatically grant unrestricted open-source redistribution rights for proprietary Simpliy components.
 
 ![G-code preview with model and supports](bilder/vorschau.png)
 
@@ -74,4 +74,4 @@ Simpliy Slicing is an independent project and **is not an official Prusa Researc
 
 Bug reports and suggestions are welcome in [GitHub Issues](../../issues). Please provide your app version, reproduction steps, and suitable screenshots. Never share credentials or private printer information.
 
-Simpliy's own source code is developed privately and is **not published in this repository**. The released package contains its license documentation and third-party notices. The [MPL dependency source archive](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) is published separately; this does not resolve every licensing question concerning Prusa-compatible format modules.
+The exact source snapshot for Alpha 1 is [available as a ZIP download](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-Source.zip). Ongoing development remains in a private repository. The source ZIP contains its licence documentation and third-party notices, including unresolved licensing questions about Prusa-compatible format modules. The [MPL dependency source archive](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) is also published separately.
