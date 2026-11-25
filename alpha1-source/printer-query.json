@@ -1,0 +1,847 @@
+{
+    "printer_models": [
+        {
+            "id": "+YV/Nw/NSXutJRyHQ/TThg",
+            "name": "Prusa XL+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "17087bd5-919b-4a60-9362-65138cbdae6b",
+                    "name": "Prusa XL+ 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL+ 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "2clJ4GxITzaQ1Vu4gqG2eQ",
+            "name": "Prusa CORE One & One+ & One+ (Gen2)",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "40cf7965-b5d0-49ec-a74f-1d27f571e0b7",
+                    "name": "Prusa CORE One & One+ 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One & One+ 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 220.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 270.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "4TfihLJ8Q1+uJebMxFdmMw",
+            "name": "Original Prusa MINI",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "1ee414ad-87b9-4306-8f30-b02456097a39",
+                    "name": "Prusa MINI & MINI+ 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MINI & MINI+ 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 180.0,
+                                "height": 180.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 180.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "84Yp2PibQ2W0EiD2vkHaZQ",
+            "name": "Prusa XL+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "819b639c-bcf4-4d5d-a2fc-0f9dda64e613",
+                    "name": "Prusa XL+ 2T 0.4 HF, 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL+ 2T 0.4 HF, 0.4 HF",
+                            "extruders_cnt": 2,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ff207ebf-25c0-4d91-8ddc-ae8e28018f4c",
+                    "name": "Prusa XL+ 5T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL+ 5T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                            "extruders_cnt": 5,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "8gQ0vRqlQQ++NPeD9RwmhQ",
+            "name": "Prusa CORE One INDX",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "632c3975-0947-47cb-a2c0-e2328efbe244",
+                    "name": "Prusa CORE One INDX 8T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One INDX 8T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                            "extruders_cnt": 8,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 248.0,
+                                "height": 205.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 270.0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "b927ec99-b121-47fd-9555-9ab803ce94fb",
+                    "name": "Prusa CORE One INDX 4T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One INDX 4T 0.4 HF, 0.4 HF, 0.4 HF, 0.4 HF",
+                            "extruders_cnt": 4,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 248.0,
+                                "height": 205.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 270.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "D8L/77yFQEmiidGo0w9gmg",
+            "name": "Prusa CORE One L & L+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "e75812a4-cc71-4601-a5e9-be7b3baae3c8",
+                    "name": "Prusa CORE One L & L+ 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One L & L+ 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 300.0,
+                                "height": 300.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 330.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "GtlHE0eqQMmC85e+fe4mXA",
+            "name": "Original Prusa MK4",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "11abfc79-842e-4bf1-9401-89da15e78256",
+                    "name": "Prusa MK4 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK4 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "HyXD2z5/T6yMV4ae1jqjOQ",
+            "name": "Original Prusa i3 MK3S & MK3S+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "c23bf8f0-ec71-4d2b-a18a-4a9b8a70c7cc",
+                    "name": "Prusa MK3S & MK3S+ 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3S & MK3S+ 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "KVsBP75bS9elqgyrVBgTRw",
+            "name": "Original Prusa MK3.9S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "486e634f-ecf3-4285-a454-33f4a167dc2c",
+                    "name": "Prusa MK3.9S 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.9S 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "OTUkt1FfQZmO75o7Q6hcew",
+            "name": "Prusa CORE One & One+ & One+ (Gen2)",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "57cc4c4e-a868-443d-8740-12f7bd3c3d4e",
+                    "name": "Prusa CORE One & One+ MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One & One+ MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 220.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 270.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "Rmu06ZheQOiwJkty1grr5g",
+            "name": "Prusa CORE One L & L+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "c399638e-7c1e-4839-bd13-334f2bd94ceb",
+                    "name": "Prusa CORE One L & L+ MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa CORE One L & L+ MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 300.0,
+                                "height": 300.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 330.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "Sed1dIxCR4egdk5hstw/wQ",
+            "name": "Original Prusa MK4",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "e2760d00-624c-4cd7-b8ec-35c0d2e9edd5",
+                    "name": "Prusa MK4 MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK4 MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "TDsUrDxOQlCYG6xiqVozSQ",
+            "name": "Original Prusa MK4S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "c3354a2a-677d-43b2-a145-2fa857ed4537",
+                    "name": "Prusa MK4S 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK4S 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "aJsZBN9UQIejzj3iRcH6WA",
+            "name": "Original Prusa MK3.9",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "db06fbcc-33a9-44bc-a87e-3ea3f8eadef7",
+                    "name": "Prusa MK3.9 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.9 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "bm/SkJ2ST6Gc8KfAom+pwA",
+            "name": "Original Prusa MK3.9S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "24a99d30-a29f-4d78-9a68-b27c34a29786",
+                    "name": "Prusa MK3.9S MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.9S MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "gkDGQai3R3GuH7PTLuzxvA",
+            "name": "Original Prusa MK3.5 & MK3.5S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "8ce83d54-8656-45a3-a3ac-fde403bd30c1",
+                    "name": "Prusa MK3.5 & MK3.5S MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.5 & MK3.5S MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "hFC8NvMdS2WkyZ9Wsck4zQ",
+            "name": "Original Prusa i3 MK2.5",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "f0f81578-3d0d-4d76-9073-8c89cea902f5",
+                    "name": "Prusa MK2.5 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK2.5 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 200.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "ic2KYKIYQMiM1JKt1WZS+Q",
+            "name": "Original Prusa i3 MK3S & MK3S+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "0512d69c-7a9b-45ef-990e-57194a35d28d",
+                    "name": "Prusa MK3S & MK3S+ MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3S & MK3S+ MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "ky4yZbL4SD+acu4VKveJUg",
+            "name": "Original Prusa i3 MK2.5S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "7eae192f-cf2d-4b85-a677-5211389881c6",
+                    "name": "Prusa MK2.5S 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK2.5S 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 200.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "l9xLkSlFTDaUIXmHfFQ2iw",
+            "name": "Original Prusa MK3.5 & MK3.5S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "052b120d-08e0-449d-b73a-449e2ae14f64",
+                    "name": "Prusa MK3.5 & MK3.5S 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.5 & MK3.5S 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "pX8kG6bySUWksKR0O6pSeQ",
+            "name": "Original Prusa i3 MK2.5S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "4b78f78e-4c3d-40fb-b0fa-990ef6338c2b",
+                    "name": "Prusa MK2.5S MMU2S 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK2.5S MMU2S 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 200.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "pnS1zrWkRZaSSCZ890Tutw",
+            "name": "Prusa Signature Oak",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "b91d9fce-1c48-4771-abfa-3f9b487f3035",
+                    "name": "Prusa Signature Oak 0.4 HF",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa Signature Oak 0.4 HF",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 220.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 270.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "qfQfvlJVSuif6K79CZxfLA",
+            "name": "Original Prusa i3 MK3",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "d2873786-2e63-4ad6-9c57-5d7d510733ca",
+                    "name": "Prusa MK3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "rsVS1tgtQyKf7pWb54FcZA",
+            "name": "Original Prusa MK3.9",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "677fcb0d-6d22-4e99-8cde-0cf34bf14a0a",
+                    "name": "Prusa MK3.9 MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3.9 MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "sDaINpExS2qxgbDnvceoEA",
+            "name": "Original Prusa MK4S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "aab59134-ba82-44ed-bf22-3149854eab31",
+                    "name": "Prusa MK4S MMU3 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK4S MMU3 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 220.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "sf7EpZslQbWkosrBX/K/wg",
+            "name": "Original Prusa XL",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "2b39288c-0048-4ce0-bc23-4d5f8f56c3f1",
+                    "name": "Prusa XL 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "squOPd8HQU6IF1m8ujIK/A",
+            "name": "Original Prusa i3 MK2S",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "8b1750df-fb42-4623-ad54-9f68f61906d5",
+                    "name": "Prusa MK2S 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK2S 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 200.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "tMm/XedsThCqLydJ9dji3w",
+            "name": "Original Prusa XL",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "3e4a2bf1-3e7a-4968-b57f-aaa8c7c0db92",
+                    "name": "Prusa XL 2T 0.4, 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL 2T 0.4, 0.4",
+                            "extruders_cnt": 2,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "a16112ca-6b79-4af6-8b37-f0bd4b4db7e9",
+                    "name": "Prusa XL 5T 0.4, 0.4, 0.4, 0.4, 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa XL 5T 0.4, 0.4, 0.4, 0.4, 0.4",
+                            "extruders_cnt": 5,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 360.0,
+                                "height": 360.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 360.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "y1WFpmqYTQWCLQlPSUO/3A",
+            "name": "Original Prusa i3 MK3S & MK3S+",
+            "technology": "FFF",
+            "variants": [
+                {
+                    "id": "abe51a42-61a9-4347-a1e5-3fc370c1f3d5",
+                    "name": "Prusa MK3S & MK3S+ MMU2S 0.4",
+                    "printer_profiles": [
+                        {
+                            "name": "Prusa MK3S & MK3S+ MMU2S 0.4",
+                            "extruders_cnt": 1,
+                            "bed": {
+                                "type": "Rectangle",
+                                "width": 250.0,
+                                "height": 210.0,
+                                "origin": "[0, 0]",
+                                "max_print_height": 210.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "vendor_name": "Prusa Research FFF",
+            "vendor_id": "PrusaResearch"
+        },
+        {
+            "id": "sl1",
+            "name": "Original Prusa SL1",
+            "technology": "SLA",
+            "printer_profiles": [
+                {
+                    "name": "SL1",
+                    "bed": {
+                        "type": "Rectangle",
+                        "width": 118.0,
+                        "height": 66.0,
+                        "origin": "[-1.48, -1.02]",
+                        "max_print_height": 150.0
+                    }
+                }
+            ],
+            "vendor_name": "Prusa Research SLA",
+            "vendor_id": "PrusaResearchSLA"
+        },
+        {
+            "id": "sl1s",
+            "name": "Original Prusa SL1S SPEED",
+            "technology": "SLA",
+            "printer_profiles": [
+                {
+                    "name": "SL1S SPEED",
+                    "bed": {
+                        "type": "Rectangle",
+                        "width": 127.0,
+                        "height": 80.0,
+                        "origin": "[-0.5, -0.5]",
+                        "max_print_height": 150.0
+                    }
+                }
+            ],
+            "vendor_name": "Prusa Research SLA",
+            "vendor_id": "PrusaResearchSLA"
+        }
+    ]
+}
