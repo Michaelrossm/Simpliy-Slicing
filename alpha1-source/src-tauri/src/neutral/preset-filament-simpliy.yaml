@@ -1,0 +1,5 @@
+kind: filament
+id: simpliy-filament
+name: Simpliy
+condition: printer.base_model == "SIMPLIY"
+values: {}
