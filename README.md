@@ -6,7 +6,7 @@
 
 [**Windows-Alpha herunterladen**](../../releases/tag/v0.0.0-alpha.1) · [Alle Releases](../../releases) · [Bedienungsanleitung](ANLEITUNG.md) · [Ersteinrichtung mit Bildern](ersteinrichtung/) · [Fehler melden](../../issues)
 
-**Open-Source-Quelltexte der MPL-2.0-Abhängigkeiten:** [Quellcode-Archiv herunterladen](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Komponenten und Hinweise](OPEN-SOURCE-QUELLCODE.md). Der eigene Simpliy-Quellcode wird nicht mitgeliefert.
+**Quellcode Alpha 1:** [Simpliy-Quellcode herunterladen](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-Source.zip) · [Öffentlicher Alpha-1-Quellstand](../../tree/alpha1-source-snapshot/alpha1-source). [MPL-2.0-Quelltexte](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-MPL-Sources.zip) · [Lizenzhinweise](OPEN-SOURCE-QUELLCODE.md). Die eigenen Simpliy-Komponenten bleiben unter den im Archiv dokumentierten Bedingungen lizenziert; die Quellenveröffentlichung ist keine pauschale Open-Source-Freigabe.
 
 ![G-Code-Vorschau mit Modell und Stützen](bilder/vorschau.png)
 
@@ -70,4 +70,4 @@ Simpliy Slicing ist ein eigenständiges Projekt und kein offizielles Produkt von
 
 ## Feedback und Quellcode
 
-Fehler und Verbesserungsvorschläge sind unter [Issues](../../issues) willkommen. Bitte Version, Schritte zur Reproduktion und gegebenenfalls geeignete Bilder angeben; keine Zugangsdaten oder privaten Druckerinformationen veröffentlichen. Der Quellcode wird derzeit privat entwickelt und ist in diesem öffentlichen Repository nicht enthalten. Hinweise zu Lizenz und Drittanbieterkomponenten liegen dem Release bei.
+Fehler und Verbesserungsvorschläge sind unter [Issues](../../issues) willkommen. Bitte Version, Schritte zur Reproduktion und gegebenenfalls geeignete Bilder angeben; keine Zugangsdaten oder privaten Druckerinformationen veröffentlichen. Der zur veröffentlichten Alpha 1 gehörende [Quellcode ist als ZIP erhältlich](../../releases/download/v0.0.0-alpha.1/Simpliy-Slicing-0.0.0-alpha.1-Source.zip); die laufende Entwicklung erfolgt weiterhin im privaten Repository. Die [Herkunfts- und Lizenzhinweise](../../tree/alpha1-source-snapshot/alpha1-source) im Quellcodearchiv einschließlich offener Prüfpunkte sind zu beachten. Hinweise zu Drittanbieterkomponenten liegen dem Release bei.
