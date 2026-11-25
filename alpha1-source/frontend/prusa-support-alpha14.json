@@ -1,0 +1,599 @@
+[
+  {
+    "name": "dont_support_bridges",
+    "max": null,
+    "min": null,
+    "type": "Bool",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": true
+  },
+  {
+    "name": "first_layer_acceleration_over_raft",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "first_layer_speed_over_raft",
+    "max": null,
+    "min": 0,
+    "type": "FloatOrPercentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 30,
+      "is_percent": false
+    }
+  },
+  {
+    "name": "first_layer_support_material_speed",
+    "max": null,
+    "min": 0,
+    "type": "FloatOrPercentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 0,
+      "is_percent": false
+    }
+  },
+  {
+    "name": "raft_contact_distance",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0.1
+  },
+  {
+    "name": "raft_expansion",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 1.5
+  },
+  {
+    "name": "raft_first_layer_density",
+    "max": 100,
+    "min": 10,
+    "type": "Percentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 90,
+      "is_percent": true
+    }
+  },
+  {
+    "name": "raft_first_layer_expansion",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 3
+  },
+  {
+    "name": "raft_layers",
+    "max": null,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Object",
+      "MacroOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material",
+    "max": null,
+    "min": null,
+    "type": "Enum",
+    "enum_values": [
+      "none",
+      "enforcers_only",
+      "everywhere"
+    ],
+    "location": "Print",
+    "overrides_in": [
+      "Object",
+      "MacroOverrides"
+    ],
+    "value": "enforcers_only"
+  },
+  {
+    "name": "support_material_angle",
+    "max": 359,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material_bottom_contact_distance",
+    "max": null,
+    "min": null,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material_bottom_interface_layers",
+    "max": null,
+    "min": -1,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": -1
+  },
+  {
+    "name": "support_material_buildplate_only",
+    "max": null,
+    "min": null,
+    "type": "Bool",
+    "location": "Print",
+    "overrides_in": [
+      "Object",
+      "MacroOverrides"
+    ],
+    "value": false
+  },
+  {
+    "name": "support_material_closing_radius",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 2
+  },
+  {
+    "name": "support_material_contact_distance",
+    "max": null,
+    "min": null,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0.2
+  },
+  {
+    "name": "support_material_enforce_layers",
+    "max": null,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material_extruder",
+    "max": null,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Object",
+      "MacroOverrides"
+    ],
+    "value": 1
+  },
+  {
+    "name": "support_material_extrusion_width",
+    "max": null,
+    "min": 0,
+    "type": "FloatOrPercentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 0,
+      "is_percent": false
+    }
+  },
+  {
+    "name": "support_material_first_layer_density",
+    "max": 100,
+    "min": 10,
+    "type": "Percentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 90,
+      "is_percent": true
+    }
+  },
+  {
+    "name": "support_material_first_layer_expansion",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 3
+  },
+  {
+    "name": "support_material_interface_contact_loops",
+    "max": null,
+    "min": null,
+    "type": "Bool",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": false
+  },
+  {
+    "name": "support_material_interface_extruder",
+    "max": null,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Object",
+      "MacroOverrides"
+    ],
+    "value": 1
+  },
+  {
+    "name": "support_material_interface_layers",
+    "max": null,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 3
+  },
+  {
+    "name": "support_material_interface_pattern",
+    "max": null,
+    "min": null,
+    "type": "Enum",
+    "enum_values": [
+      "auto",
+      "rectilinear",
+      "concentric"
+    ],
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": "rectilinear"
+  },
+  {
+    "name": "support_material_interface_spacing",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material_interface_speed",
+    "max": null,
+    "min": 0,
+    "type": "FloatOrPercentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 100,
+      "is_percent": true
+    }
+  },
+  {
+    "name": "support_material_pattern",
+    "max": null,
+    "min": null,
+    "type": "Enum",
+    "enum_values": [
+      "rectilinear",
+      "rectilinear-grid",
+      "honeycomb"
+    ],
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": "rectilinear"
+  },
+  {
+    "name": "support_material_spacing",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 2.5
+  },
+  {
+    "name": "support_material_speed",
+    "max": null,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 60
+  },
+  {
+    "name": "support_material_style",
+    "max": null,
+    "min": null,
+    "type": "Enum",
+    "enum_values": [
+      "grid",
+      "snug",
+      "organic"
+    ],
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": "grid"
+  },
+  {
+    "name": "support_material_synchronize_layers",
+    "max": null,
+    "min": null,
+    "type": "Bool",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": false
+  },
+  {
+    "name": "support_material_threshold",
+    "max": 90,
+    "min": 0,
+    "type": "Int",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0
+  },
+  {
+    "name": "support_material_with_sheath",
+    "max": null,
+    "min": null,
+    "type": "Bool",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": true
+  },
+  {
+    "name": "support_material_xy_spacing",
+    "max": null,
+    "min": 0,
+    "type": "FloatOrPercentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 50,
+      "is_percent": true
+    }
+  },
+  {
+    "name": "support_tree_angle",
+    "max": 85,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 40
+  },
+  {
+    "name": "support_tree_angle_slow",
+    "max": 85,
+    "min": 10,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 25
+  },
+  {
+    "name": "support_tree_branch_diameter",
+    "max": 100,
+    "min": 0.10000000149011612,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 2
+  },
+  {
+    "name": "support_tree_branch_diameter_angle",
+    "max": 15,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 5
+  },
+  {
+    "name": "support_tree_branch_diameter_double_wall",
+    "max": 100,
+    "min": 0,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 3
+  },
+  {
+    "name": "support_tree_branch_distance",
+    "max": null,
+    "min": null,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 1
+  },
+  {
+    "name": "support_tree_tip_diameter",
+    "max": 100,
+    "min": 0.10000000149011612,
+    "type": "Float",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": 0.8
+  },
+  {
+    "name": "support_tree_top_rate",
+    "max": null,
+    "min": 5,
+    "type": "Percentage",
+    "location": "Print",
+    "overrides_in": [
+      "Tool",
+      "Object",
+      "MacroSlotOverrides"
+    ],
+    "value": {
+      "value": 15,
+      "is_percent": true
+    }
+  }
+]
