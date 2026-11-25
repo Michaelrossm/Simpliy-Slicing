@@ -1,0 +1,71 @@
+name: Publish Simpliy Alpha 1 source archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-alpha1-source.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out verified Alpha 1 snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: alpha1-source-snapshot
+          persist-credentials: false
+
+      - name: Validate and package original sources
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from hashlib import sha256
+          from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
+          import os
+          import subprocess
+
+          root = Path("alpha1-source")
+          files = sorted(p for p in root.rglob("*") if p.is_file())
+          assert len(files) == 141, f"Expected 141 files, got {len(files)}"
+          assert (root / "SOURCE_RELEASE_INFO.md").exists()
+          assert (root / "legal" / "LIZENZ.md").exists()
+          assert (root / "src-tauri" / "src" / "lib.rs").exists()
+          assert (root / "frontend" / "app.js").exists()
+          assert not (root / "profiles").exists()
+          assert not (root / "test-prusa-data").exists()
+
+          dst = Path("Simpliy-Slicing-0.0.0-alpha.1-Source.zip")
+          with ZipFile(dst, "w", compression=ZIP_DEFLATED, compresslevel=8) as z:
+              manifest = []
+              for p in files:
+                  rel = p.relative_to(root).as_posix()
+                  raw = p.read_bytes()
+                  entry = ZipInfo("Simpliy-Slicing-0.0.0-alpha.1-Source/" + rel)
+                  entry.date_time = (2026, 11, 24, 9, 1, 0)
+                  entry.external_attr = 0o100644 << 16
+                  entry.compress_type = ZIP_DEFLATED
+                  z.writestr(entry, raw, compress_type=ZIP_DEFLATED, compresslevel=8)
+                  manifest.append(f"{sha256(raw).hexdigest()}  {rel}")
+              meta = ZipInfo("Simpliy-Slicing-0.0.0-alpha.1-Source/SHA256SUMS.txt")
+              meta.date_time = (2026, 11, 24, 9, 1, 0)
+              meta.external_attr = 0o100644 << 16
+              meta.compress_type = ZIP_DEFLATED
+              z.writestr(meta, "\n".join(manifest) + "\n")
+          print(f"Prepared {dst}, {len(files)} source files, SHA256: {sha256(dst.read_bytes()).hexdigest()}")
+          PY
+
+      - name: Upload to existing Alpha 1 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release view v0.0.0-alpha.1 --repo "$GITHUB_REPOSITORY"
+          gh release upload v0.0.0-alpha.1 Simpliy-Slicing-0.0.0-alpha.1-Source.zip --repo "$GITHUB_REPOSITORY" --clobber
+          gh release view v0.0.0-alpha.1 --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name'
