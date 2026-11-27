@@ -1,0 +1,406 @@
+﻿[
+    {
+        "Kategorie":  "Material",
+        "Name":  "PLA",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|216",
+        "Bett":  "1|55",
+        "Flow":  "0.89000",
+        "Retract":  "0.70000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "ABS",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|255",
+        "Bett":  "1|100",
+        "Flow":  "0.89000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "PET",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|256",
+        "Bett":  "1|75",
+        "Flow":  "1.00000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Nylon",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|220",
+        "Bett":  "1|80",
+        "Flow":  "0.89000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "TPU 82A",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|270",
+        "Bett":  "1|30",
+        "Flow":  "0.89000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Easy ABS-Sunlu",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|260",
+        "Bett":  "1|55",
+        "Flow":  "0.93000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "pet-amazon-grau",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|260",
+        "Bett":  "1|75",
+        "Flow":  "0.98000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Fiberflex-cr20-cr",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|285",
+        "Bett":  "1|65",
+        "Flow":  "0.89000",
+        "Retract":  "1.00000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Prusa-PC-Blend_CF_Black",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|299; 2|298",
+        "Bett":  "1|103",
+        "Flow":  "1.05000",
+        "Retract":  "0.90000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "petg-owl",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|275",
+        "Bett":  "1|75",
+        "Flow":  "0.88000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "PETG-schwarz jayo",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|255",
+        "Bett":  "1|77",
+        "Flow":  "0.98000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "CR-Pla-weiß",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|220; 2|216",
+        "Bett":  "1|54",
+        "Flow":  "0.95000",
+        "Retract":  "0.70000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Pla Overture-schwarz",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|218; 2|214",
+        "Bett":  "1|54",
+        "Flow":  "0.93000",
+        "Retract":  "0.70000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "Pla-dual-esun",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|216; 2|214",
+        "Bett":  "1|54",
+        "Flow":  "0.91000",
+        "Retract":  "0.70000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "CR3d Petg sonder",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|285; 2|290",
+        "Bett":  "1|75",
+        "Flow":  "0.91000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "TPu 85 CR3d natur",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|230",
+        "Bett":  "1|50",
+        "Flow":  "1.02000",
+        "Retract":  "0.30000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "PETGx Flam-schwarz ",
+        "Aktiv":  false,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|290",
+        "Bett":  "1|72",
+        "Flow":  "0.98000",
+        "Retract":  "0.80000"
+    },
+    {
+        "Kategorie":  "Material",
+        "Name":  "PETcF",
+        "Aktiv":  true,
+        "Werte":  "extruder, overrideFanSpeedForTopLayer, topLayerFanSpeedPercentage, temperatureController, temperatureController, fan, startingScript, overrideFanSpeedForBridging",
+        "Duese":  "1|299; 2|300",
+        "Bett":  "1|95",
+        "Flow":  "0.91000",
+        "Retract":  "1.00000"
+    },
+    {
+        "Kategorie":  "Quality",
+        "Name":  "Fast",
+        "Aktiv":  false,
+        "Werte":  "layerHeight, topSolidLayers, bottomSolidLayers, sparseInfillPercentage, sparseSupportInfillPercentage",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Quality",
+        "Name":  "Medium",
+        "Aktiv":  true,
+        "Werte":  "layerHeight, topSolidLayers, bottomSolidLayers, sparseInfillPercentage, sparseSupportInfillPercentage",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Quality",
+        "Name":  "High",
+        "Aktiv":  false,
+        "Werte":  "layerHeight, topSolidLayers, bottomSolidLayers, sparseInfillPercentage, sparseSupportInfillPercentage",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Quality",
+        "Name":  "1,5",
+        "Aktiv":  false,
+        "Werte":  "layerHeight, topSolidLayers, bottomSolidLayers, sparseInfillPercentage, sparseSupportInfillPercentage",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Quality",
+        "Name":  "0,8",
+        "Aktiv":  false,
+        "Werte":  "layerHeight, topSolidLayers, bottomSolidLayers, sparseInfillPercentage, sparseSupportInfillPercentage",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Ergänzung",
+        "Name":  "Raft",
+        "Aktiv":  false,
+        "Werte":  "useSkirt, skirtExtruder, skirtLayers, skirtOffset, skirtOutlines, useRaft, raftExtruder, raftBaseLayers, raftTopLayers, raftOffset, raftSeparationDistance, raftSpeedUnits, raftSpeedPercentage, raftSpeedAbsolute",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Ergänzung",
+        "Name":  "Brim",
+        "Aktiv":  true,
+        "Werte":  "useSkirt, skirtExtruder, skirtLayers, skirtOffset, skirtOutlines, useRaft, raftExtruder, raftBaseLayers, raftTopLayers, raftOffset, raftSeparationDistance, raftSpeedUnits, raftSpeedPercentage, raftSpeedAbsolute",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Ergänzung",
+        "Name":  "Skirt",
+        "Aktiv":  false,
+        "Werte":  "useSkirt, skirtExtruder, skirtLayers, skirtOffset, skirtOutlines, useRaft, raftExtruder, raftBaseLayers, raftTopLayers, raftOffset, raftSeparationDistance, raftSpeedUnits, raftSpeedPercentage, raftSpeedAbsolute",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Ergänzung",
+        "Name":  "Skirt-Raft",
+        "Aktiv":  false,
+        "Werte":  "useSkirt, skirtExtruder, skirtLayers, skirtOffset, skirtOutlines, useRaft, raftExtruder, raftBaseLayers, raftTopLayers, raftOffset, raftSeparationDistance, raftSpeedUnits, raftSpeedPercentage, raftSpeedAbsolute",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Ergänzung",
+        "Name":  "nichts",
+        "Aktiv":  false,
+        "Werte":  "useSkirt, skirtExtruder, skirtLayers, skirtOffset, skirtOutlines, useRaft, raftExtruder, raftBaseLayers, raftTopLayers, raftOffset, raftSeparationDistance, raftSpeedUnits, raftSpeedPercentage, raftSpeedAbsolute",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil1",
+        "Aktiv":  true,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil2",
+        "Aktiv":  false,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil3",
+        "Aktiv":  false,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil 4",
+        "Aktiv":  false,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil 5",
+        "Aktiv":  false,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    },
+    {
+        "Kategorie":  "Prozessänderung",
+        "Name":  "Teil 6",
+        "Aktiv":  false,
+        "Werte":  "processChangeScript",
+        "Duese":  {
+
+                  },
+        "Bett":  {
+
+                 },
+        "Flow":  null,
+        "Retract":  null
+    }
+]

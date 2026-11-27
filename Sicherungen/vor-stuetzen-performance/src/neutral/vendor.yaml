@@ -1,0 +1,118 @@
+# Neutrales Engine-Paket von Simpliy: kein Druckermodell, keine Herstellerwerte.
+# Es dient nur dazu, dass die Engine eine gueltige Konfiguration bilden kann. Alle Werte kommen beim Slicen aus Simpliy.
+kind: vendor
+id: Simpliy
+name: Simpliy
+version: 1.0.0
+features:
+  printer:
+    multi_extruder:
+      default: false
+---
+kind: printer
+technology: FFF
+name: Simpliy
+id: SIMPLIY
+model:
+  base_model: SIMPLIY
+  model: SIMPLIY
+tool_count: 1
+---
+kind: tool
+technology: FFF
+id: neutral
+name: Neutral
+features:
+  nozzle_diameter:
+    default: 0.4
+---
+kind: sheet
+id: neutral
+name: Neutral
+type: neutral
+---
+kind: printer_config
+id: simpliy-1t
+name: Simpliy
+printer: SIMPLIY
+tool_count: 1
+tools:
+- tool: neutral
+sheet: neutral
+---
+kind: printer_config
+id: simpliy-2t
+name: Simpliy 2T
+printer: SIMPLIY
+tool_count: 2
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-3t
+name: Simpliy 3T
+printer: SIMPLIY
+tool_count: 3
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-4t
+name: Simpliy 4T
+printer: SIMPLIY
+tool_count: 4
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-5t
+name: Simpliy 5T
+printer: SIMPLIY
+tool_count: 5
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-6t
+name: Simpliy 6T
+printer: SIMPLIY
+tool_count: 6
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-7t
+name: Simpliy 7T
+printer: SIMPLIY
+tool_count: 7
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true
+---
+kind: printer_config
+id: simpliy-8t
+name: Simpliy 8T
+printer: SIMPLIY
+tool_count: 8
+tools:
+- tool: neutral
+sheet: neutral
+features:
+  multi_extruder: true

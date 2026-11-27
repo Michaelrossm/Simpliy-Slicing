@@ -1,0 +1,312 @@
+{
+  "manifest": {
+    "format": "SimpliyProfile",
+    "schema_version": 1,
+    "profile_id": "s3d-mk3s-reprapt-entwurf",
+    "engine_family": "PrusaSlicer",
+    "engine_target": "3.0.0-alpha14",
+    "source": {
+      "kind": "s3d-fff-partial-port",
+      "filename": "PRUSA-MK3S-Reprapt.fff",
+      "warning": "ENTWURF: Settings editor only; transfer to slicing is not wired. RRF macros and temperature require verification."
+    }
+  },
+  "profile": {
+    "name": "ENTWURF PRUSA-MK3S-Reprapt (S3D)",
+    "base_parameters": {
+      "nozzle_diameter": 0.5,
+      "filament_diameter": 1.75,
+      "perimeters": 2,
+      "first_layer_height": "140%",
+      "first_layer_speed": "30%"
+    },
+    "categories": [
+      {
+        "id": "material",
+        "name": "Material",
+        "selected": "material-17",
+        "options": [
+          {
+            "id": "material-0",
+            "name": "PLA",
+            "assignments": {
+              "extrusion_multiplier": 0.89,
+              "retract_length": 0.7,
+              "first_layer_temperature": 216,
+              "temperature": 216,
+              "first_layer_bed_temperature": 55,
+              "bed_temperature": 55
+            }
+          },
+          {
+            "id": "material-1",
+            "name": "ABS",
+            "assignments": {
+              "extrusion_multiplier": 0.89,
+              "retract_length": 0.8,
+              "first_layer_temperature": 255,
+              "temperature": 255,
+              "first_layer_bed_temperature": 100,
+              "bed_temperature": 100
+            }
+          },
+          {
+            "id": "material-2",
+            "name": "PET",
+            "assignments": {
+              "extrusion_multiplier": 1,
+              "retract_length": 0.8,
+              "first_layer_temperature": 256,
+              "temperature": 256,
+              "first_layer_bed_temperature": 75,
+              "bed_temperature": 75
+            }
+          },
+          {
+            "id": "material-3",
+            "name": "Nylon",
+            "assignments": {
+              "extrusion_multiplier": 0.89,
+              "retract_length": 0.8,
+              "first_layer_temperature": 220,
+              "temperature": 220,
+              "first_layer_bed_temperature": 80,
+              "bed_temperature": 80
+            }
+          },
+          {
+            "id": "material-4",
+            "name": "TPU 82A",
+            "assignments": {
+              "extrusion_multiplier": 0.89,
+              "retract_length": 0.8,
+              "first_layer_temperature": 270,
+              "temperature": 270,
+              "first_layer_bed_temperature": 30,
+              "bed_temperature": 30
+            }
+          },
+          {
+            "id": "material-5",
+            "name": "Easy ABS-Sunlu",
+            "assignments": {
+              "extrusion_multiplier": 0.93,
+              "retract_length": 0.8,
+              "first_layer_temperature": 260,
+              "temperature": 260,
+              "first_layer_bed_temperature": 55,
+              "bed_temperature": 55
+            }
+          },
+          {
+            "id": "material-6",
+            "name": "pet-amazon-grau",
+            "assignments": {
+              "extrusion_multiplier": 0.98,
+              "retract_length": 0.8,
+              "first_layer_temperature": 260,
+              "temperature": 260,
+              "first_layer_bed_temperature": 75,
+              "bed_temperature": 75
+            }
+          },
+          {
+            "id": "material-7",
+            "name": "Fiberflex-cr20-cr",
+            "assignments": {
+              "extrusion_multiplier": 0.89,
+              "retract_length": 1,
+              "first_layer_temperature": 285,
+              "temperature": 285,
+              "first_layer_bed_temperature": 65,
+              "bed_temperature": 65
+            }
+          },
+          {
+            "id": "material-8",
+            "name": "Prusa-PC-Blend_CF_Black",
+            "assignments": {
+              "extrusion_multiplier": 1.05,
+              "retract_length": 0.9,
+              "first_layer_temperature": 299,
+              "temperature": 298,
+              "first_layer_bed_temperature": 103,
+              "bed_temperature": 103
+            }
+          },
+          {
+            "id": "material-9",
+            "name": "petg-owl",
+            "assignments": {
+              "extrusion_multiplier": 0.88,
+              "retract_length": 0.8,
+              "first_layer_temperature": 275,
+              "temperature": 275,
+              "first_layer_bed_temperature": 75,
+              "bed_temperature": 75
+            }
+          },
+          {
+            "id": "material-10",
+            "name": "PETG-schwarz jayo",
+            "assignments": {
+              "extrusion_multiplier": 0.98,
+              "retract_length": 0.8,
+              "first_layer_temperature": 255,
+              "temperature": 255,
+              "first_layer_bed_temperature": 77,
+              "bed_temperature": 77
+            }
+          },
+          {
+            "id": "material-11",
+            "name": "CR-Pla-weiß",
+            "assignments": {
+              "extrusion_multiplier": 0.95,
+              "retract_length": 0.7,
+              "first_layer_temperature": 220,
+              "temperature": 216,
+              "first_layer_bed_temperature": 54,
+              "bed_temperature": 54
+            }
+          },
+          {
+            "id": "material-12",
+            "name": "Pla Overture-schwarz",
+            "assignments": {
+              "extrusion_multiplier": 0.93,
+              "retract_length": 0.7,
+              "first_layer_temperature": 218,
+              "temperature": 214,
+              "first_layer_bed_temperature": 54,
+              "bed_temperature": 54
+            }
+          },
+          {
+            "id": "material-13",
+            "name": "Pla-dual-esun",
+            "assignments": {
+              "extrusion_multiplier": 0.91,
+              "retract_length": 0.7,
+              "first_layer_temperature": 216,
+              "temperature": 214,
+              "first_layer_bed_temperature": 54,
+              "bed_temperature": 54
+            }
+          },
+          {
+            "id": "material-14",
+            "name": "CR3d Petg sonder",
+            "assignments": {
+              "extrusion_multiplier": 0.91,
+              "retract_length": 0.8,
+              "first_layer_temperature": 285,
+              "temperature": 290,
+              "first_layer_bed_temperature": 75,
+              "bed_temperature": 75
+            }
+          },
+          {
+            "id": "material-15",
+            "name": "TPu 85 CR3d natur",
+            "assignments": {
+              "extrusion_multiplier": 1.02,
+              "retract_length": 0.3,
+              "first_layer_temperature": 230,
+              "temperature": 230,
+              "first_layer_bed_temperature": 50,
+              "bed_temperature": 50
+            }
+          },
+          {
+            "id": "material-16",
+            "name": "PETGx Flam-schwarz ",
+            "assignments": {
+              "extrusion_multiplier": 0.98,
+              "retract_length": 0.8,
+              "first_layer_temperature": 290,
+              "temperature": 290,
+              "first_layer_bed_temperature": 72,
+              "bed_temperature": 72
+            }
+          },
+          {
+            "id": "material-17",
+            "name": "PETcF",
+            "assignments": {
+              "extrusion_multiplier": 0.91,
+              "retract_length": 1,
+              "first_layer_temperature": 299,
+              "temperature": 300,
+              "first_layer_bed_temperature": 95,
+              "bed_temperature": 95
+            }
+          }
+        ]
+      },
+      {
+        "id": "quality",
+        "name": "Quality",
+        "selected": "quality-1",
+        "options": [
+          {
+            "id": "quality-0",
+            "name": "Fast",
+            "assignments": {
+              "layer_height": 0.3,
+              "top_solid_layers": 3,
+              "bottom_solid_layers": 3,
+              "fill_density": "10%"
+            }
+          },
+          {
+            "id": "quality-1",
+            "name": "Medium",
+            "assignments": {
+              "layer_height": 0.1,
+              "top_solid_layers": 3,
+              "bottom_solid_layers": 3,
+              "fill_density": "20%"
+            }
+          },
+          {
+            "id": "quality-2",
+            "name": "High",
+            "assignments": {
+              "layer_height": 0.1,
+              "top_solid_layers": 4,
+              "bottom_solid_layers": 4,
+              "fill_density": "30%"
+            }
+          },
+          {
+            "id": "quality-3",
+            "name": "1,5",
+            "assignments": {
+              "layer_height": 0.15,
+              "top_solid_layers": 4,
+              "bottom_solid_layers": 4,
+              "fill_density": "20%"
+            }
+          },
+          {
+            "id": "quality-4",
+            "name": "0,8",
+            "assignments": {
+              "layer_height": 0.08,
+              "top_solid_layers": 3,
+              "bottom_solid_layers": 3,
+              "fill_density": "0%"
+            }
+          }
+        ]
+      }
+    ],
+    "category_order": [
+      "material",
+      "quality"
+    ],
+    "processes": [],
+    "notes": "Teilport: Material und Qualitaet sind teilweise abgebildet; Start-/Endmakros und andere Einstellungen sind im begleitenden Bericht dokumentiert. Werte sind nicht automatisch an die Prusa-Engine angebunden."
+  }
+}

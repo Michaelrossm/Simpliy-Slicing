@@ -1,0 +1,18 @@
+{
+  "name": "simpliy-slicing-desktop",
+  "private": true,
+  "version": "0.0.1-alpha.1",
+  "description": "Rust/Tauri Windows desktop shell for Simpliy Slicing (no browser window)",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "check:js": "node --check frontend/app.js && node --check frontend/tauri-bridge.js && node --check frontend/viewport.js && node --check frontend/workbench.js",
+    "test": "node --test tests/*.test.mjs tests/*.test.js"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  }
+}

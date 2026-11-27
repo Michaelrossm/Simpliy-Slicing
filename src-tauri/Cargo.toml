@@ -1,0 +1,27 @@
+[package]
+name = "simpliy-slicing"
+version = "0.0.1-alpha.1"
+description = "Simpliy Slicing native desktop shell"
+authors = ["Michael Roßmann"]
+edition = "2021"
+license-file = "../legal/LIZENZ.md"
+
+[lib]
+name = "simpliy_slicing_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["unstable", "image-png", "image-ico"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+base64 = "0.22"
+crc32fast = "1.5"
+ureq = { version = "2", features = ["json"] }
+semver = "1"
+
+rfd = "0.15"
+serialport = { version = "4.7", default-features = false } # --simpliy-usb-monitor-alpha2

@@ -1,0 +1,76 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const file=name=>JSON.parse(fs.readFileSync(new URL('../frontend/'+name,import.meta.url),'utf8'));
+const initial=file('initial_state.json'), builtin=JSON.parse(fs.readFileSync(new URL('./fixtures/builtin-mk3s.json',import.meta.url),'utf8'));
+const load=async n=>import(new URL('../frontend/'+n,import.meta.url).href);
+const pure=Object.assign({},...await Promise.all(['settings-layout.js','option-labels.js','themes.js','serial-panel.js','i18n.js','engine-config.js','process-dialog.js','geometry.js','paint-core.js','print-job.js','model-actions.js','plate-plan.js','feature-panels.js','section.js','native.js','preview-data.js','support-plate.js','support-client.js','support-panel.js','profile-ui.js','color-dialog.js'].map(load)),{createFeatures:(await load('features.js')).createFeatures,P:await load('profiles.js'),Z:await load('zone-plan.js'),R:await load('offset-rules.js'),...Object.fromEntries(await Promise.all(['colors','offsets','zones','model-assignment','favorites','process-reset'].map(async n=>Object.entries(await load('actions/'+n+'.js')))).then(a=>a.flat()))});
+const packet=n=>({meta:{layers:Array.from({length:n},(_,i)=>({z:.2*(i+1),end:i+1,travelEnd:0})),roles:['Perimeter'],summary:{},count:n},arrays:{}});
+function makeHarness(){
+ const elements=new Map();function el(name){if(!elements.has(name))elements.set(name,{innerHTML:'',addEventListener(){},dataset:{},style:{}});return elements.get(name)}
+ const document={querySelector:sel=>el(sel),addEventListener(){},getElementById:()=>null,body:{append(){}}};
+ const state=structuredClone(initial); const payload={'/api/state':state,'./engine-catalog.json':file('engine-catalog.json')};
+ const ctx={document,window:{__nativeDialogs:true},console,structuredClone,setTimeout,clearTimeout,setInterval,clearInterval,crypto:globalThis.crypto,fetch:async url=>({ok:Object.hasOwn(payload,url),json:async()=>structuredClone(payload[url])}),...pure,readPacket:x=>x,Viewport:class{},renderDock:()=>'',renderRail:()=>'',renderSidebar:()=>'',renderQuickbar:()=>'',renderPreviewControls:()=>'',paintStates:()=>[],PREVIEW_METRICS:[['type','Wegtyp','']],visibleProcesses:p=>p.filter(x=>!['support-body','support-interface','prusa-support'].includes(x.role))};
+ vm.createContext(ctx);let js=fs.readFileSync(new URL('../frontend/app.js',import.meta.url),'utf8').replace(/^import .*;.*\r?\n/gm,'').replace(/boot\(\);\s*$/,'');
+ js+='\nglobalThis.testApi={boot,renderPrinterDialog,renderPrusaPresets,getState:()=>state,handleAction,prepareJob,setModelSelection:(id,value)=>assignment.select(id,value),runEngine,loadPreview,exportGcode,stampPlate,getPreview:()=>({preview,previewMode,previewPath}),getOutputs:()=>features.outputs,setPrinterEdit:x=>{printerEdit=x},setFilamentEdit:x=>{filamentEdit=x},setPrinterList:x=>{prusaPrinters=x},setPrusaProfiles:x=>{prusaProfiles=x}};';vm.runInContext(js,ctx);return {ctx,elements};
+}
+test('workspace opens unchanged; personal profiles are not shipped with the app',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();assert.equal(ws.profiles.length,initial.profiles.length);assert.ok(!ws.profiles.some(p=>p.manifest.profile_id==='s3d-mk3s-reprapt-entwurf'));assert.equal(ws.active_profile_id,initial.active_profile_id);assert.equal(ws.processes.length,initial.processes.length)});
+test('printer dialog edits all printer settings, qualities and material release after the switch',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();
+ const catalog=file('engine-catalog.json'),byKey=new Map(catalog.map(s=>[s.key,s])),base=Object.fromEntries(catalog.map(s=>[s.key,s.default]));
+ ctx.P.migrate(ws,{byKey,base,resolveOld:()=>({})});const html=ctx.testApi.renderPrinterDialog();
+ assert.doesNotMatch(html,/data-printer-setting=/);
+ assert.doesNotMatch(html,/data-quality-name|quality-add/);assert.match(html,/data-action="save-printers"/);assert.match(html,/data-printer-material=/);assert.match(html,/data-action="import-printer"/)});
+test('Prusa preset dialog exposes search and add actions',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();ctx.testApi.setPrinterList([{name:'Prusa MK3S',technology:'FFF',extruders_cnt:1}]);const html=ctx.testApi.renderPrusaPresets();assert.match(html,/Prusa MK3S/);assert.match(html,/data-filter-select="prusa-printer"/);assert.match(html,/data-filter-select="prusa-filament"/);assert.match(html,/data-action="prusa-save-printer"/);assert.match(html,/data-action="prusa-save-filament"/)});
+
+test('choosing a local printer clears an unrelated engine preset',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ws.ui.prusa_preset={printer:'Old Prusa',print:'old',tool:'no tool',filament:'old'};ctx.testApi.setPrinterEdit(ws.printers[0].id);await ctx.testApi.handleAction('set-default-printer',{dataset:{}});assert.equal(ws.ui.prusa_preset,null)});
+
+test('unverified S3D draft cannot silently slice with unrelated engine values',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ws.profiles.push(structuredClone(builtin));ws.processes.find(p=>p.id===ws.active_process_id).profile_id='s3d-mk3s-reprapt-entwurf';ws.engine_path='test.exe';let calls=0;ctx.window.__TAURI__={core:{invoke:async(n)=>{if(!/base_config|engine_texts|backup_workspace/.test(n))calls++}}};await ctx.testApi.handleAction('slice-now',{dataset:{}});assert.equal(calls,0,'kein Slicing-Aufruf')});
+test('slicing sends profile values through the project pipeline',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ws.engine_path='test.exe';ws.ui.prusa_preset={printer:'P',print:'p',tool:'t',filament:'f'};let asked=[];ctx.window.__TAURI__={core:{invoke:async name=>{asked.push(name);if(name==='engine_base_config')throw 'kaputt';}}};await ctx.testApi.handleAction('slice-now',{dataset:{}});assert.ok(asked.includes('engine_base_config'));assert.ok(!asked.includes('slice_project'))});
+
+test('printer query lists FFF printers',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ws.engine_path='test-engine.exe';ctx.window.__TAURI__={core:{invoke:async()=>({printer_models:[{technology:'FFF',variants:[{printer_profiles:[{name:'MK3S',extruders_cnt:1}]}]}]})}};await ctx.testApi.handleAction('open-prusa-presets',{dataset:{}});assert.match(ctx.testApi.renderPrusaPresets(),/MK3S/)});
+
+test('removing a model never deletes a process',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();const n=ws.processes.length;ws.ui.active_section='prozesse';ws.models=[{id:'m',name:'m.stl',path:'m.stl',plate:ws.ui.active_plate}];ws.ui.selected_model_id='m';await ctx.testApi.handleAction('delete-model',{dataset:{}});assert.equal(ws.models.length,0);assert.equal(ws.processes.length,n)});
+
+test('project round trip keeps plates and never overwrites a local profile',async()=>{
+ const {projectDocument,applyProject}=await load('project-file.js');const {ctx}=makeHarness();await ctx.testApi.boot();
+ const ws=JSON.parse(JSON.stringify(ctx.testApi.getState()));ws.plates.push({id:'plate-2',name:'Zwei'});ws.models=[{id:'m',name:'m',path:'m.stl',plate:'plate-2'}];
+ const printer=ws.printers[0];printer.use_values=true;printer.web_url='10.0.0.5';ws.active_printer_id=printer.id;
+ const doc=projectDocument(ws,'p');assert.ok(!JSON.stringify(doc).includes('10.0.0.5'));
+ doc.profiles[0].profile.base_parameters.layer_height=0.07;
+ const target=JSON.parse(JSON.stringify(ws)),kept=JSON.stringify(target.profiles[0]);let n=0;
+ applyProject(target,doc,p=>p+'-'+(++n));
+ assert.equal(target.plates.length,2);assert.equal(JSON.stringify(target.profiles[0]),kept);
+ assert.equal(target.profiles.at(-1).profile.base_parameters.layer_height,0.07);assert.equal(target.active_printer_id,printer.id);
+});
+
+test('slicing prepares a temporary preview without asking for a save path',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ws.engine_path='engine.exe';const plate=ws.ui.active_plate;ws.models.push({id:'m',plate,name:'cube.stl',enabled:true});const called=[];ctx.window.__TAURI__={core:{invoke:async(name,args)=>{called.push([name,args]);if(name==='slice_preview')return {output:args.job.config.configuration.printer_settings.binary_gcode?'C:/Temp/preview.bgcode':'C:/Temp/preview.gcode'};throw Error(name)}}};const prepared={stamp:'abc',job:{config:{configuration:{printer_settings:{binary_gcode:true}}}}};await ctx.testApi.runEngine(prepared,plate);assert.deepEqual(called.map(x=>x[0]),['slice_preview','slice_preview']);assert.equal(called[0][1].job.config.configuration.printer_settings.binary_gcode,false);assert.equal(called[1][1].job.config.configuration.printer_settings.binary_gcode,true);assert.equal(prepared.job.config.configuration.printer_settings.binary_gcode,true);assert.equal(ctx.testApi.getOutputs().get(plate).path,'C:/Temp/preview.bgcode');assert.equal(ctx.testApi.getOutputs().get(plate).previewPath,'C:/Temp/preview.gcode')});
+test('explicit export asks for a target only after slicing',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();const plate=ws.ui.active_plate;const outputs=ctx.testApi.getOutputs();outputs.set(plate,{path:'C:/Temp/preview.gcode',name:'cube.gcode',stamp:ctx.testApi.stampPlate(plate)});const called=[];ctx.window.__TAURI__={core:{invoke:async(name,args)=>{called.push([name,args]);if(name==='choose_output')return 'C:/print/cube.gcode';if(name==='export_preview')return null;throw Error(name)}}};await ctx.testApi.exportGcode();assert.deepEqual(called.map(x=>x[0]),['choose_output','export_preview']);assert.equal(called[1][1].source,'C:/Temp/preview.gcode');assert.equal(called[1][1].output,'C:/print/cube.gcode')});
+
+test('stale slice cannot be exported as if it matched current settings',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();ctx.testApi.getOutputs().set(ws.ui.active_plate,{path:'C:/Temp/preview.gcode',name:'cube.gcode',stamp:'stale'});let calls=0;ctx.window.__TAURI__={core:{invoke:async()=>{calls++}}};await ctx.testApi.exportGcode();assert.equal(calls,0)});
+test('preview can be left for model editing and restored per plate',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState(),first=ws.ui.active_plate;ws.plates.push({id:'second',name:'Second'});ctx.testApi.getOutputs().set(first,{path:'C:/Temp/preview.gcode',name:'part.gcode',stamp:ctx.testApi.stampPlate(first)});ctx.window.__TAURI__={core:{invoke:async name=>{assert.equal(name,'read_preview');return packet(1)}}};assert.equal(await ctx.testApi.loadPreview(first),true);assert.equal(ctx.testApi.getPreview().previewMode,true);await ctx.testApi.handleAction('model-view',{dataset:{}});assert.equal(ctx.testApi.getPreview().previewMode,false);await ctx.testApi.handleAction('pick-plate',{dataset:{id:'second'}});assert.equal(ctx.testApi.getPreview().preview,null);await ctx.testApi.handleAction('pick-plate',{dataset:{id:first}});assert.ok(ctx.testApi.getPreview().preview);await ctx.testApi.handleAction('preview-view',{dataset:{}});assert.equal(ctx.testApi.getPreview().previewMode,true)});
+test('binary preview exports with the requested binary extension',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState(),plate=ws.ui.active_plate;ctx.testApi.getOutputs().set(plate,{path:'C:/Temp/preview.bgcode',previewPath:'C:/Temp/preview.gcode',name:'part.bgcode',stamp:ctx.testApi.stampPlate(plate)});const calls=[];ctx.window.__TAURI__={core:{invoke:async(name,args)=>{calls.push([name,args]);return name==='choose_output'?'C:/print/part.bgcode':null}}};await ctx.testApi.exportGcode();assert.equal(calls[0][1].extension,'bgcode');assert.equal(calls[1][1].source,'C:/Temp/preview.bgcode')});
+test('binary jobs reopen the ASCII layer preview after changing plates',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState(),first=ws.ui.active_plate;ws.plates.push({id:'second-bin',name:'Second'});ctx.testApi.getOutputs().set(first,{path:'C:/Temp/job.bgcode',previewPath:'C:/Temp/preview.gcode',name:'job.bgcode',stamp:ctx.testApi.stampPlate(first)});let reads=0;ctx.window.__TAURI__={core:{invoke:async(name,args)=>{assert.equal(name,'read_preview');assert.equal(args.path,'C:/Temp/preview.gcode');reads++;return packet(1)}}};await ctx.testApi.loadPreview(first);await ctx.testApi.handleAction('pick-plate',{dataset:{id:'second-bin'}});await ctx.testApi.handleAction('pick-plate',{dataset:{id:first}});assert.ok(ctx.testApi.getPreview().preview);await ctx.testApi.handleAction('preview-view',{dataset:{}});assert.equal(ctx.testApi.getPreview().previewMode,true);assert.equal(reads,1)});
+
+test('clicking the active tool closes its panel and choosing another opens it',async()=>{const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState();await ctx.testApi.handleAction('select-tool',{dataset:{tool:'move'}});assert.equal(ws.ui.tool,'move');assert.equal(ws.ui.dock_open,true);await ctx.testApi.handleAction('select-tool',{dataset:{tool:'move'}});assert.equal(ws.ui.dock_open,false);await ctx.testApi.handleAction('select-tool',{dataset:{tool:'scale'}});assert.equal(ws.ui.tool,'scale');assert.equal(ws.ui.dock_open,true)});
+
+test('process model dialog applies assignments and cancel restores original assignments',async()=>{
+ const {ctx,elements}=makeHarness();await ctx.testApi.boot();ctx.window.confirm=()=>true;const ws=ctx.testApi.getState(),a=ws.active_process_id;
+ ws.processes.push({id:'other',name:'Other',role:'model',profile_id:ws.active_profile_id,selections:{},overrides:{}});
+ ws.models=[{id:'m',name:'part.stl',plate:ws.ui.active_plate,process:a}];
+ await ctx.testApi.handleAction('open-process',{dataset:{}});await ctx.testApi.handleAction('process-models',{dataset:{}});
+ assert.match(elements.get('#app').innerHTML,/part.stl/);ctx.testApi.setModelSelection('m','other');
+ await ctx.testApi.handleAction('apply-process-models',{dataset:{}});assert.equal(ws.models[0].process,'other');
+ await ctx.testApi.handleAction('cancel-process',{dataset:{}});assert.equal(ws.models[0].process,a);
+});
+
+
+
+test('a missing support is shown and needs confirmation before export',async()=>{
+ const {ctx}=makeHarness();await ctx.testApi.boot();const ws=ctx.testApi.getState(),plate=ws.ui.active_plate;ws.models.push({id:'m',name:'part.stl',plate});
+ const called=[];ctx.window.__TAURI__={core:{invoke:async name=>{called.push(name);return name==='slice_preview'?{output:'C:/Temp/test.gcode',supportInfo:{text:'0 von 1',warning:'1 von 1 Stützen hat Prusa nicht erzeugt'}}:null}}};
+ const prepared={stamp:ctx.testApi.stampPlate(plate),job:{config:{configuration:{printer_settings:{binary_gcode:false}}}}};
+ await ctx.testApi.runEngine(prepared,plate);assert.match(ctx.testApi.getOutputs().get(plate).supportInfo.warning,/nicht erzeugt/);
+ let question='';ctx.window.confirm=q=>{question=q;return false};await ctx.testApi.exportGcode();
+ assert.match(question,/trotzdem speichern/);assert.ok(!called.includes('choose_output'));
+});

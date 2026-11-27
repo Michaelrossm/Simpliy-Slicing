@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "created_at": "2026-11-21T11:17:42+00:00",
+  "profiles": [
+    {
+      "manifest": {
+        "format": "SimpliyProfile",
+        "schema_version": 1,
+        "profile_id": "example-prusa-mk3s",
+        "engine_family": "PrusaSlicer",
+        "engine_target": "3.0.x",
+        "source": {
+          "kind": "prusa-import-example",
+          "note": "Fiktive Beispieldaten, kein tatsächlich importiertes Prusa-Profil"
+        }
+      },
+      "profile": {
+        "name": "Beispiel – flexible Auto-Konfiguration",
+        "base_parameters": {
+          "layer_height": 0.2,
+          "temperature": 215,
+          "perimeters": 3
+        },
+        "category_order": [
+          "material",
+          "quality",
+          "adhesion",
+          "support",
+          "special"
+        ],
+        "categories": [
+          {
+            "id": "material",
+            "name": "Material",
+            "selection_mode": "single",
+            "selected": "petg",
+            "options": [
+              {
+                "id": "pla",
+                "name": "PLA",
+                "assignments": {
+                  "temperature": 215
+                }
+              },
+              {
+                "id": "petg",
+                "name": "PETG",
+                "assignments": {
+                  "temperature": 240,
+                  "filament_max_volumetric_speed": 12
+                }
+              }
+            ]
+          },
+          {
+            "id": "quality",
+            "name": "Qualität",
+            "selection_mode": "single",
+            "selected": "fine",
+            "options": [
+              {
+                "id": "medium",
+                "name": "Medium",
+                "assignments": {
+                  "layer_height": 0.2
+                }
+              },
+              {
+                "id": "fine",
+                "name": "Fine",
+                "assignments": {
+                  "layer_height": 0.12,
+                  "temperature": 245
+                }
+              }
+            ]
+          },
+          {
+            "id": "adhesion",
+            "name": "Haftung",
+            "selection_mode": "single",
+            "selected": "brim",
+            "options": [
+              {
+                "id": "none",
+                "name": "Keine",
+                "assignments": {
+                  "brim_width": 0
+                }
+              },
+              {
+                "id": "brim",
+                "name": "Brim",
+                "assignments": {
+                  "brim_width": 5
+                }
+              }
+            ]
+          },
+          {
+            "id": "support",
+            "name": "Stützenstrategie",
+            "selection_mode": "single",
+            "selected": "tree",
+            "options": [
+              {
+                "id": "tree",
+                "name": "Tree",
+                "assignments": {
+                  "simpliy.support_style": "tree"
+                }
+              },
+              {
+                "id": "pillar",
+                "name": "Pillar",
+                "assignments": {
+                  "simpliy.support_style": "pillar"
+                }
+              }
+            ]
+          },
+          {
+            "id": "special",
+            "name": "Spezialmodus",
+            "selection_mode": "single",
+            "selected": "normal",
+            "options": [
+              {
+                "id": "normal",
+                "name": "Normal",
+                "assignments": {}
+              },
+              {
+                "id": "quiet",
+                "name": "Leise",
+                "assignments": {
+                  "external_perimeter_speed": 20
+                }
+              }
+            ]
+          }
+        ],
+        "processes": [
+          {
+            "id": "model",
+            "name": "Modell",
+            "assignments": {},
+            "manual_overrides": {}
+          },
+          {
+            "id": "body",
+            "name": "Custom Support Body",
+            "assignments": {},
+            "manual_overrides": {}
+          },
+          {
+            "id": "interface",
+            "name": "Custom Support Interface",
+            "assignments": {},
+            "manual_overrides": {}
+          }
+        ],
+        "unknown_prusa_keys": {},
+        "notes": "Demonstrationsschema. Schlüssel/Validierungsbereiche mit installierter Prusa-3.0-Version prüfen; simpliy.* wird niemals direkt als Prusa-Key exportiert."
+      }
+    }
+  ],
+  "active_profile_id": "example-prusa-mk3s",
+  "printers": [
+    {
+      "id": "demo-printer",
+      "name": "Demo-Drucker (nicht verbunden)",
+      "manufacturer": "Benutzerdefiniert",
+      "bed_x": 250,
+      "bed_y": 210,
+      "bed_z": 210,
+      "nozzle": 0.4,
+      "extruders": 1,
+      "gcode_flavor": "Marlin 2",
+      "connection": "Keine"
+    }
+  ],
+  "active_printer_id": "demo-printer",
+  "filaments": [
+    {
+      "id": "demo-pla",
+      "name": "PLA – Demo",
+      "type": "PLA",
+      "temperature": 210,
+      "bed_temperature": 60,
+      "diameter": 1.75
+    }
+  ],
+  "active_filament_id": "demo-pla",
+  "models": [],
+  "processes": [
+    {
+      "id": "model",
+      "name": "Modell",
+      "role": "model",
+      "profile_id": "example-prusa-mk3s",
+      "selections": {},
+      "overrides": {},
+      "enabled": true
+    },
+    {
+      "id": "body",
+      "name": "Custom Support Body",
+      "role": "support-body",
+      "profile_id": "example-prusa-mk3s",
+      "selections": {},
+      "overrides": {},
+      "enabled": true
+    },
+    {
+      "id": "interface",
+      "name": "Custom Support Interface",
+      "role": "support-interface",
+      "profile_id": "example-prusa-mk3s",
+      "selections": {},
+      "overrides": {},
+      "enabled": true
+    },
+    {
+      "id": "prusa",
+      "name": "Prusa Support",
+      "role": "prusa-support",
+      "profile_id": "example-prusa-mk3s",
+      "selections": {},
+      "overrides": {},
+      "enabled": true
+    }
+  ],
+  "active_process_id": "model",
+  "engine_path": "",
+  "ui": {
+    "active_section": "modelle",
+    "support_type": "Tree",
+    "show_build_plate": true
+  }
+}

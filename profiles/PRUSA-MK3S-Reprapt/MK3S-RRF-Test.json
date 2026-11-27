@@ -1,0 +1,788 @@
+{
+ "manifest": {
+  "format": "SimpliyProfile",
+  "schema_version": 1,
+  "profile_id": "personal-mk3s-rrf",
+  "engine_family": "PrusaSlicer",
+  "engine_target": "3.0.0-alpha14",
+  "source": {
+   "kind": "personal-printer-settings",
+   "requires_review": true
+  }
+ },
+ "profile": {
+  "name": "MK3S RRF 0,5 – meine Einstellungen (Test)",
+  "base_parameters": {
+   "nozzle_diameter": 0.5,
+   "filament_diameter": 1.75,
+   "filament_cost": 29,
+   "automatic_extrusion_widths": false,
+   "extrusion_width": 0.6,
+   "perimeter_extrusion_width": 0.6,
+   "external_perimeter_extrusion_width": 0.6,
+   "solid_infill_extrusion_width": 0.6,
+   "top_infill_extrusion_width": 0.6,
+   "support_material_extrusion_width": 0.6,
+   "infill_extrusion_width": 0.66,
+   "first_layer_extrusion_width": 0.66,
+   "retract_speed": 41,
+   "deretract_speed": 0,
+   "retract_lift": 0.2,
+   "retract_lift_above": 0,
+   "retract_lift_below": 0,
+   "travel_ramping_lift": false,
+   "retract_before_travel": 0,
+   "retract_layer_change": false,
+   "only_retract_when_crossing_perimeters": true,
+   "wipe": true,
+   "retract_before_wipe": "0%",
+   "use_firmware_retraction": false,
+   "perimeters": 2,
+   "perimeter_generator": "classic",
+   "external_perimeters_first": false,
+   "gap_fill_enabled": true,
+   "thin_walls": false,
+   "seam_position": "aligned",
+   "spiral_vase": false,
+   "elefant_foot_compensation": 0,
+   "xy_size_compensation": 0,
+   "fill_pattern": "gyroid",
+   "fill_angle": 30,
+   "infill_overlap": "20%",
+   "infill_every_layers": 1,
+   "automatic_infill_combination": false,
+   "solid_infill_below_area": 10,
+   "infill_first": false,
+   "top_fill_pattern": "concentric",
+   "bottom_fill_pattern": "concentric",
+   "top_solid_min_thickness": 0,
+   "bottom_solid_min_thickness": 0,
+   "ironing": false,
+   "fuzzy_skin": "none",
+   "avoid_crossing_perimeters": true,
+   "avoid_crossing_perimeters_max_detour": 0,
+   "bridge_flow_ratio": 1.03,
+   "bridge_speed": 86,
+   "bridge_angle": 0,
+   "perimeter_speed": 68.8,
+   "external_perimeter_speed": 43,
+   "small_perimeter_speed": "50%",
+   "infill_speed": 86,
+   "solid_infill_speed": 68.8,
+   "top_solid_infill_speed": 21.5,
+   "gap_fill_speed": 68.8,
+   "support_material_speed": 68.8,
+   "support_material_interface_speed": 60.2,
+   "enable_dynamic_overhang_speeds": false,
+   "max_print_speed": 86,
+   "max_volumetric_speed": 0,
+   "travel_speed": 200,
+   "travel_speed_z": 16.66667,
+   "first_layer_speed": "30%",
+   "cooling": true,
+   "slowdown_below_layer_time": 15,
+   "min_print_speed": 17.2,
+   "enable_dynamic_fan_speeds": false,
+   "support_material": "enforcers_only",
+   "support_material_style": "grid",
+   "support_material_pattern": "rectilinear",
+   "support_material_angle": 45,
+   "support_material_interface_layers": 0,
+   "support_material_bottom_interface_layers": 0,
+   "support_material_with_sheath": false,
+   "support_material_xy_spacing": 0.3,
+   "complete_objects": false,
+   "gcode_flavor": "reprapfirmware",
+   "machine_limits_usage": "time_estimate_only",
+   "silent_mode": false,
+   "remaining_times": false,
+   "gcode_label_objects": "disabled",
+   "binary_gcode": false,
+   "arc_fitting": "disabled",
+   "use_relative_e_distances": false,
+   "use_volumetric_e": false,
+   "autoemit_temperature_commands": false,
+   "pressure_advance": "disabled",
+   "bed_shape": "0x0, 250x0, 250x210, 0x210",
+   "max_print_height": 210,
+   "z_offset": 0,
+   "printer_model": "MK3S RRF",
+   "thumbnails": "300x300/PNG, 64x64/PNG",
+   "end_gcode": "M98 P\"0:/sys/print/End.g\"",
+   "end_filament_gcode": "",
+   "before_layer_gcode": "",
+   "layer_gcode": "{if layer_num == 1}M104 S{temperature[0]}\nM140 S{bed_temperature[0]}\n{endif}",
+   "toolchange_gcode": "",
+   "between_objects_gcode": "",
+   "pause_print_gcode": "M25",
+   "color_change_gcode": "M25",
+   "template_custom_gcode": "",
+   "default_acceleration": 0,
+   "perimeter_acceleration": 0,
+   "external_perimeter_acceleration": 0,
+   "infill_acceleration": 0,
+   "solid_infill_acceleration": 0,
+   "top_solid_infill_acceleration": 0,
+   "bridge_acceleration": 0,
+   "first_layer_acceleration": 0,
+   "first_layer_acceleration_over_raft": 0,
+   "travel_acceleration": 0,
+   "travel_short_distance_acceleration": 0,
+   "wipe_tower_acceleration": 0,
+   "first_layer_perimeter_speed": "30%",
+   "first_layer_external_perimeter_speed": "30%",
+   "first_layer_infill_speed": "30%",
+   "first_layer_solid_infill_speed": "30%",
+   "first_layer_top_solid_infill_speed": "30%",
+   "first_layer_gap_fill_speed": "30%",
+   "first_layer_support_material_speed": "30%",
+   "machine_max_acceleration_x": 1200,
+   "machine_max_acceleration_y": 1200,
+   "machine_max_acceleration_z": 120,
+   "machine_max_acceleration_e": 5000,
+   "machine_max_acceleration_extruding": 1200,
+   "machine_max_acceleration_travel": 1200,
+   "machine_max_jerk_x": 10,
+   "machine_max_jerk_y": 10,
+   "machine_max_jerk_z": 0.4,
+   "machine_max_jerk_e": 4.5
+  },
+  "category_order": [
+   "mk3s-cat-0",
+   "mk3s-cat-1",
+   "mk3s-cat-2",
+   "mk3s-cat-3"
+  ],
+  "categories": [
+   {
+    "id": "mk3s-cat-0",
+    "name": "Material",
+    "selection_mode": "single",
+    "selected": "mk3s-cat-0-17",
+    "options": [
+     {
+      "id": "mk3s-cat-0-0",
+      "name": "PLA",
+      "assignments": {
+       "extrusion_multiplier": 0.89,
+       "filament_density": 1.24,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.7,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 216,
+       "temperature": 216,
+       "first_layer_bed_temperature": 55,
+       "bed_temperature": 55,
+       "fan_always_on": true,
+       "min_fan_speed": 70,
+       "max_fan_speed": 100,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 3,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/macros/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-1",
+      "name": "ABS",
+      "assignments": {
+       "extrusion_multiplier": 0.89,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 255,
+       "temperature": 255,
+       "first_layer_bed_temperature": 100,
+       "bed_temperature": 100,
+       "fan_always_on": false,
+       "min_fan_speed": 0,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 0,
+       "full_fan_speed_layer": 0,
+       "fan_below_layer_time": 25,
+       "bridge_fan_speed": 20,
+       "start_gcode": "; ---- RRF / Duet Startcode (S3D) ----\nG21                 ; mm\nG90                 ; absolute moves\n;M82                ; aBSOLUTE extrusion\n\nT0                  ; Tool 0 wählen\n\n; Temperaturen (S3D ersetzt [first_layer_bed_temperature] / [first_layer_temperature])\nM140 S[first_layer_bed_temperature]\nM104 S[first_layer_temperature]\n\n; Warten bis heiß\nM190 S[first_layer_bed_temperature]\nM109 S[first_layer_temperature]\n\n; Home + Tilt + Mesh\nG28                 ; home\n;G32      ; dein Makro: Z-Tilt + Mesh\nM98 P\"z_tilt.g\"\n\n; adaptive mesh anhand Bauteil-Boundingbox:\nM98 P\"adaptive_mesh.g\" X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}\n; Optional: an sichere Position\nG1 X60 Y5 F6000\n\n; Prime-Line (Beispiel vorne)\n\nG92 E0 ; reset extrusion distance\nG1 X60.0 E9.0  F1000.0 ; priming\nG1 X100.0 E12.5  F1000.0 ; priming\nM98 P\"0:/macros/Nozzel.g\"\n"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-2",
+      "name": "PET",
+      "assignments": {
+       "extrusion_multiplier": 1,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 256,
+       "temperature": 256,
+       "first_layer_bed_temperature": 75,
+       "bed_temperature": 75,
+       "fan_always_on": true,
+       "min_fan_speed": 40,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-3",
+      "name": "Nylon",
+      "assignments": {
+       "extrusion_multiplier": 0.89,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 220,
+       "temperature": 220,
+       "first_layer_bed_temperature": 80,
+       "bed_temperature": 80,
+       "fan_always_on": false,
+       "min_fan_speed": 0,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 0,
+       "full_fan_speed_layer": 0,
+       "fan_below_layer_time": 35,
+       "bridge_fan_speed": 20,
+       "start_gcode": "; ---- RRF / Duet Startcode (S3D) ----\nG21                 ; mm\nG90                 ; absolute moves\n;M82                ; aBSOLUTE extrusion\n\nT0                  ; Tool 0 wählen\n\n; Temperaturen (S3D ersetzt [first_layer_bed_temperature] / [first_layer_temperature])\nM140 S[first_layer_bed_temperature]\nM104 S[first_layer_temperature]\n\n; Warten bis heiß\nM190 S[first_layer_bed_temperature]\nM109 S[first_layer_temperature]\n\n; Home + Tilt + Mesh\nG28                 ; home\n;G32      ; dein Makro: Z-Tilt + Mesh\nM98 P\"z_tilt.g\"\n\n; adaptive mesh anhand Bauteil-Boundingbox:\nM98 P\"adaptive_mesh.g\" X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}\n; Optional: an sichere Position\nG1 X60 Y5 F6000\n\n; Prime-Line (Beispiel vorne)\n\nG92 E0 ; reset extrusion distance\nG1 X60.0 E9.0  F1000.0 ; priming\nG1 X100.0 E12.5  F1000.0 ; priming\nM98 P\"0:/macros/Nozzel.g\"\n"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-4",
+      "name": "TPU 82A",
+      "assignments": {
+       "extrusion_multiplier": 0.89,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 270,
+       "temperature": 270,
+       "first_layer_bed_temperature": 30,
+       "bed_temperature": 30,
+       "fan_always_on": true,
+       "min_fan_speed": 40,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "; ---- RRF / Duet Startcode (S3D) ----\nG21                 ; mm\nG90                 ; absolute moves\n;M82                ; aBSOLUTE extrusion\n\nT0                  ; Tool 0 wählen\n\n; Temperaturen (S3D ersetzt [first_layer_bed_temperature] / [first_layer_temperature])\nM140 S[first_layer_bed_temperature]\nM104 S[first_layer_temperature]\n\n; Warten bis heiß\nM190 S[first_layer_bed_temperature]\nM109 S[first_layer_temperature]\n\n; Home + Tilt + Mesh\nG28                 ; home\n;G32      ; dein Makro: Z-Tilt + Mesh\nM98 P\"z_tilt.g\"\n\n; adaptive mesh anhand Bauteil-Boundingbox:\nM98 P\"adaptive_mesh.g\" X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}\n; Optional: an sichere Position\nG1 X60 Y5 F6000\n\n; Prime-Line (Beispiel vorne)\n\nG92 E0 ; reset extrusion distance\nG1 X60.0 E9.0  F1000.0 ; priming\nG1 X100.0 E12.5  F1000.0 ; priming\nM98 P\"0:/macros/Nozzel.g\"\n"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-5",
+      "name": "Easy ABS-Sunlu",
+      "assignments": {
+       "extrusion_multiplier": 0.93,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 260,
+       "temperature": 260,
+       "first_layer_bed_temperature": 55,
+       "bed_temperature": 55,
+       "fan_always_on": true,
+       "min_fan_speed": 40,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/macros/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-6",
+      "name": "pet-amazon-grau",
+      "assignments": {
+       "extrusion_multiplier": 0.98,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 260,
+       "temperature": 260,
+       "first_layer_bed_temperature": 75,
+       "bed_temperature": 75,
+       "fan_always_on": true,
+       "min_fan_speed": 25,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 3,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-7",
+      "name": "Fiberflex-cr20-cr",
+      "assignments": {
+       "extrusion_multiplier": 0.89,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 1,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 285,
+       "temperature": 285,
+       "first_layer_bed_temperature": 65,
+       "bed_temperature": 65,
+       "fan_always_on": true,
+       "min_fan_speed": 35,
+       "max_fan_speed": 80,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-8",
+      "name": "Prusa-PC-Blend_CF_Black",
+      "assignments": {
+       "extrusion_multiplier": 1.05,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.9,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 299,
+       "temperature": 298,
+       "first_layer_bed_temperature": 103,
+       "bed_temperature": 103,
+       "fan_always_on": true,
+       "min_fan_speed": 10,
+       "max_fan_speed": 15,
+       "disable_fan_first_layers": 4,
+       "full_fan_speed_layer": 0,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-9",
+      "name": "petg-owl",
+      "assignments": {
+       "extrusion_multiplier": 0.88,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 8.2,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 275,
+       "temperature": 275,
+       "first_layer_bed_temperature": 75,
+       "bed_temperature": 75,
+       "fan_always_on": true,
+       "min_fan_speed": 15,
+       "max_fan_speed": 20,
+       "disable_fan_first_layers": 3,
+       "full_fan_speed_layer": 0,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-10",
+      "name": "PETG-schwarz jayo",
+      "assignments": {
+       "extrusion_multiplier": 0.98,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 8.2,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 255,
+       "temperature": 255,
+       "first_layer_bed_temperature": 77,
+       "bed_temperature": 77,
+       "fan_always_on": true,
+       "min_fan_speed": 25,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-11",
+      "name": "CR-Pla-weiß",
+      "assignments": {
+       "extrusion_multiplier": 0.95,
+       "filament_density": 1.24,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.7,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 220,
+       "temperature": 216,
+       "first_layer_bed_temperature": 54,
+       "bed_temperature": 54,
+       "fan_always_on": true,
+       "min_fan_speed": 65,
+       "max_fan_speed": 70,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 7,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/macros/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-12",
+      "name": "Pla Overture-schwarz",
+      "assignments": {
+       "extrusion_multiplier": 0.93,
+       "filament_density": 1.24,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.7,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 218,
+       "temperature": 214,
+       "first_layer_bed_temperature": 54,
+       "bed_temperature": 54,
+       "fan_always_on": true,
+       "min_fan_speed": 65,
+       "max_fan_speed": 70,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 7,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/macros/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-13",
+      "name": "Pla-dual-esun",
+      "assignments": {
+       "extrusion_multiplier": 0.91,
+       "filament_density": 1.24,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.7,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 216,
+       "temperature": 214,
+       "first_layer_bed_temperature": 54,
+       "bed_temperature": 54,
+       "fan_always_on": true,
+       "min_fan_speed": 65,
+       "max_fan_speed": 70,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 7,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/macros/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-14",
+      "name": "CR3d Petg sonder",
+      "assignments": {
+       "extrusion_multiplier": 0.91,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 8.2,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 285,
+       "temperature": 290,
+       "first_layer_bed_temperature": 75,
+       "bed_temperature": 75,
+       "fan_always_on": true,
+       "min_fan_speed": 70,
+       "max_fan_speed": 70,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 4,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-15",
+      "name": "TPu 85 CR3d natur",
+      "assignments": {
+       "extrusion_multiplier": 1.02,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 230,
+       "temperature": 230,
+       "first_layer_bed_temperature": 50,
+       "bed_temperature": 50,
+       "fan_always_on": true,
+       "min_fan_speed": 40,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "; ---- RRF / Duet Startcode (S3D) ----\nG21                 ; mm\nG90                 ; absolute moves\n;M82                ; aBSOLUTE extrusion\n\nT0                  ; Tool 0 wählen\n\n; Temperaturen (S3D ersetzt [first_layer_bed_temperature] / [first_layer_temperature])\nM140 S[first_layer_bed_temperature]\nM104 S[first_layer_temperature]\n\n; Warten bis heiß\nM190 S[first_layer_bed_temperature]\nM109 S[first_layer_temperature]\n\n; Home + Tilt + Mesh\nG28                 ; home\n;G32      ; dein Makro: Z-Tilt + Mesh\nM98 P\"z_tilt.g\"\n\n; adaptive mesh anhand Bauteil-Boundingbox:\nM98 P\"adaptive_mesh.g\" X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}\n; Optional: an sichere Position\nG1 X60 Y5 F6000\n\n; Prime-Line (Beispiel vorne)\n\nG92 E0 ; reset extrusion distance\nG1 X60.0 E9.0  F1000.0 ; priming\nG1 X100.0 E12.5  F1000.0 ; priming\nM98 P\"0:/macros/Nozzel.g\"\n"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-16",
+      "name": "PETGx Flam-schwarz",
+      "assignments": {
+       "extrusion_multiplier": 0.98,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 13.3,
+       "retract_length": 0.8,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 290,
+       "temperature": 290,
+       "first_layer_bed_temperature": 72,
+       "bed_temperature": 72,
+       "fan_always_on": true,
+       "min_fan_speed": 60,
+       "max_fan_speed": 70,
+       "disable_fan_first_layers": 2,
+       "full_fan_speed_layer": 5,
+       "fan_below_layer_time": 20,
+       "bridge_fan_speed": 20,
+       "start_gcode": "; ---- RRF / Duet Startcode (S3D) ----\nG21                 ; mm\nG90                 ; absolute moves\n;M82                ; aBSOLUTE extrusion\n\nT0                  ; Tool 0 wählen\n\n; Temperaturen (S3D ersetzt [first_layer_bed_temperature] / [first_layer_temperature])\nM140 S[first_layer_bed_temperature]\nM104 S[first_layer_temperature]\n\n; Warten bis heiß\nM190 S[first_layer_bed_temperature]\nM109 S[first_layer_temperature]\n\n; Home + Tilt + Mesh\nG28                 ; home\n;G32      ; dein Makro: Z-Tilt + Mesh\nM98 P\"z_tilt.g\"\n\n; adaptive mesh anhand Bauteil-Boundingbox:\nM98 P\"adaptive_mesh.g\" X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}\n; Optional: an sichere Position\nG1 X60 Y5 F6000\n\n; Prime-Line (Beispiel vorne)\n\nG92 E0 ; reset extrusion distance\nG1 X60.0 E9.0  F1000.0 ; priming\nG1 X100.0 E12.5  F1000.0 ; priming\nM98 P\"0:/macros/Nozzel.g\"\n"
+      }
+     },
+     {
+      "id": "mk3s-cat-0-17",
+      "name": "PETcF",
+      "assignments": {
+       "extrusion_multiplier": 0.91,
+       "filament_density": 1.04,
+       "filament_max_volumetric_speed": 8.2,
+       "retract_length": 1,
+       "retract_restart_extra": 0,
+       "first_layer_temperature": 299,
+       "temperature": 300,
+       "first_layer_bed_temperature": 95,
+       "bed_temperature": 95,
+       "fan_always_on": true,
+       "min_fan_speed": 20,
+       "max_fan_speed": 50,
+       "disable_fan_first_layers": 1,
+       "full_fan_speed_layer": 0,
+       "fan_below_layer_time": 15,
+       "bridge_fan_speed": 20,
+       "start_gcode": "M98 P\"0:/sys/print/start.g\" S[first_layer_bed_temperature] H[first_layer_temperature] X{first_layer_print_min[0]} Y{first_layer_print_min[1]} I{first_layer_print_max[0]} J{first_layer_print_max[1]}"
+      }
+     }
+    ]
+   },
+   {
+    "id": "mk3s-cat-1",
+    "name": "Quality",
+    "selection_mode": "single",
+    "selected": "mk3s-cat-1-1",
+    "options": [
+     {
+      "id": "mk3s-cat-1-0",
+      "name": "Fast",
+      "assignments": {
+       "layer_height": 0.3,
+       "first_layer_height": "140%",
+       "top_solid_layers": 3,
+       "bottom_solid_layers": 3,
+       "fill_density": "10%",
+       "support_material_spacing": 1.8,
+       "support_material_contact_distance": 0.3,
+       "support_material_bottom_contact_distance": 0.3
+      }
+     },
+     {
+      "id": "mk3s-cat-1-1",
+      "name": "Medium",
+      "assignments": {
+       "layer_height": 0.1,
+       "first_layer_height": "140%",
+       "top_solid_layers": 3,
+       "bottom_solid_layers": 3,
+       "fill_density": "20%",
+       "support_material_spacing": 1.4,
+       "support_material_contact_distance": 0.1,
+       "support_material_bottom_contact_distance": 0.1
+      }
+     },
+     {
+      "id": "mk3s-cat-1-2",
+      "name": "High",
+      "assignments": {
+       "layer_height": 0.1,
+       "first_layer_height": "140%",
+       "top_solid_layers": 4,
+       "bottom_solid_layers": 4,
+       "fill_density": "30%",
+       "support_material_spacing": 0.9,
+       "support_material_contact_distance": 0.1,
+       "support_material_bottom_contact_distance": 0.1
+      }
+     },
+     {
+      "id": "mk3s-cat-1-3",
+      "name": "1,5",
+      "assignments": {
+       "layer_height": 0.15,
+       "first_layer_height": "140%",
+       "top_solid_layers": 4,
+       "bottom_solid_layers": 4,
+       "fill_density": "20%",
+       "support_material_spacing": 0.9,
+       "support_material_contact_distance": 0.15,
+       "support_material_bottom_contact_distance": 0.15
+      }
+     },
+     {
+      "id": "mk3s-cat-1-4",
+      "name": "0,8",
+      "assignments": {
+       "layer_height": 0.08,
+       "first_layer_height": "140%",
+       "top_solid_layers": 3,
+       "bottom_solid_layers": 3,
+       "fill_density": "0%",
+       "support_material_spacing": 0.9,
+       "support_material_contact_distance": 0.08,
+       "support_material_bottom_contact_distance": 0.08
+      }
+     }
+    ]
+   },
+   {
+    "id": "mk3s-cat-2",
+    "name": "Ergänzung",
+    "selection_mode": "single",
+    "selected": "mk3s-cat-2-1",
+    "options": [
+     {
+      "id": "mk3s-cat-2-0",
+      "name": "Raft",
+      "assignments": {
+       "skirts": 0,
+       "skirt_distance": 4,
+       "skirt_height": 1,
+       "brim_type": "no_brim",
+       "brim_width": 0,
+       "raft_layers": 5,
+       "raft_expansion": 2,
+       "raft_contact_distance": 0.14
+      }
+     },
+     {
+      "id": "mk3s-cat-2-1",
+      "name": "Brim",
+      "assignments": {
+       "skirts": 0,
+       "skirt_distance": 0,
+       "skirt_height": 1,
+       "brim_type": "no_brim",
+       "brim_width": 0,
+       "raft_layers": 0,
+       "raft_expansion": 3,
+       "raft_contact_distance": 0.14
+      }
+     },
+     {
+      "id": "mk3s-cat-2-2",
+      "name": "Skirt",
+      "assignments": {
+       "skirts": 0,
+       "skirt_distance": 4,
+       "skirt_height": 1,
+       "brim_type": "no_brim",
+       "brim_width": 0,
+       "raft_layers": 0,
+       "raft_expansion": 3,
+       "raft_contact_distance": 0.14
+      }
+     },
+     {
+      "id": "mk3s-cat-2-3",
+      "name": "Skirt-Raft",
+      "assignments": {
+       "skirts": 3,
+       "skirt_distance": 4,
+       "skirt_height": 1,
+       "brim_type": "no_brim",
+       "brim_width": 0,
+       "raft_layers": 5,
+       "raft_expansion": 3,
+       "raft_contact_distance": 0.14
+      }
+     },
+     {
+      "id": "mk3s-cat-2-4",
+      "name": "nichts",
+      "assignments": {
+       "skirts": 0,
+       "skirt_distance": 4,
+       "skirt_height": 1,
+       "brim_type": "no_brim",
+       "brim_width": 0,
+       "raft_layers": 0,
+       "raft_expansion": 3,
+       "raft_contact_distance": 0.14
+      }
+     }
+    ]
+   },
+   {
+    "id": "mk3s-cat-3",
+    "name": "Prozessänderung",
+    "selection_mode": "single",
+    "selected": "mk3s-cat-3-0",
+    "options": [
+     {
+      "id": "mk3s-cat-3-0",
+      "name": "Teil1",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil1"
+      }
+     },
+     {
+      "id": "mk3s-cat-3-1",
+      "name": "Teil2",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil2"
+      }
+     },
+     {
+      "id": "mk3s-cat-3-2",
+      "name": "Teil3",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil3"
+      }
+     },
+     {
+      "id": "mk3s-cat-3-3",
+      "name": "Teil 4",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil4"
+      }
+     },
+     {
+      "id": "mk3s-cat-3-4",
+      "name": "Teil 5",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil5"
+      }
+     },
+     {
+      "id": "mk3s-cat-3-5",
+      "name": "Teil 6",
+      "assignments": {
+       "start_filament_gcode": "; object: Teil6"
+      }
+     }
+    ]
+   }
+  ],
+  "processes": []
+ }
+}

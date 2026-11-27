@@ -1,0 +1,12 @@
+{
+  "format": "SimpliyProfile",
+  "schema_version": 1,
+  "profile_id": "s3d-mk3s-reprapt-entwurf",
+  "engine_family": "PrusaSlicer",
+  "engine_target": "3.0.0-alpha14",
+  "source": {
+    "kind": "s3d-fff-partial-port",
+    "filename": "PRUSA-MK3S-Reprapt.fff",
+    "warning": "ENTWURF: Settings editor only; transfer to slicing is not wired. RRF macros and temperature require verification."
+  }
+}

@@ -1,0 +1,195 @@
+/* Simpliy Slicing alpha.2: theme layer. Included AFTER the existing styles.css.
+   No styling here changes the 3D model material colors or G-code preview palette. */
+:root[data-simpliy-theme="dark"] { color-scheme: dark; }
+:root[data-simpliy-theme="light"] {
+  color-scheme: light;
+  --bg: #edf1f6;
+  --bar: #f8fafc;
+  --well: #ffffff;
+  --field: #ffffff;
+  --line: #cbd4de;
+  --edge: #aebdca;
+  --text: #1e2937;
+  --dim: #536479;
+  --accent: #2467a4;
+  --bad: #b42318;
+  --theme-button-top: #ffffff;
+  --theme-button-bottom: #e6ecf2;
+  --theme-button-hover: #dbe8f3;
+  --theme-tab-selected: #e3ebf5;
+  --theme-panel-heading: #eff4f8;
+  --theme-rail-bg: #e4eaf2;
+  --theme-rail-button-top: #ffffff;
+  --theme-rail-button-bottom: #dce6f1;
+  --theme-focus: #d7ebfb;
+  --theme-inset: #ebf0f6;
+  --theme-label: #20344a;
+  --theme-selected-text: #ffffff;
+  --theme-loader: #2467a4;
+}
+:root[data-simpliy-theme="orange"] {
+  color-scheme: dark;
+  --bg: #332d29;
+  --bar: #27221e;
+  --well: #25211e;
+  --field: #1f1b18;
+  --line: #554b40;
+  --edge: #80715f;
+  --text: #f2ebe2;
+  --dim: #c6b6a8;
+  --accent: #ab561d;
+  --bad: #ed8177;
+  --theme-button-top: #4b4035;
+  --theme-button-bottom: #342d27;
+  --theme-button-hover: #62503e;
+  --theme-tab-selected: #584332;
+  --theme-panel-heading: #221e1a;
+  --theme-rail-bg: #2b2520;
+  --theme-rail-button-top: #5c5044;
+  --theme-rail-button-bottom: #3c322b;
+  --theme-focus: #654226;
+  --theme-inset: #342d28;
+  --theme-label: #f2e5d5;
+  --theme-selected-text: #fffaf5;
+  --theme-loader: #e58d40;
+}
+:root[data-simpliy-theme="midnight"] {
+  color-scheme: dark;
+  --bg: #202a37;
+  --bar: #15202d;
+  --well: #1b2533;
+  --field: #121c29;
+  --line: #3b4b61;
+  --edge: #5a7088;
+  --text: #edf3fb;
+  --dim: #b5c5d8;
+  --accent: #2b71b4;
+  --bad: #fa7d7d;
+  --theme-button-top: #35485c;
+  --theme-button-bottom: #28394c;
+  --theme-button-hover: #49617b;
+  --theme-tab-selected: #344b65;
+  --theme-panel-heading: #131e2a;
+  --theme-rail-bg: #1c2938;
+  --theme-rail-button-top: #465b6f;
+  --theme-rail-button-bottom: #2c3e52;
+  --theme-focus: #275b86;
+  --theme-inset: #233242;
+  --theme-label: #dbe9f7;
+  --theme-selected-text: #ffffff;
+  --theme-loader: #6eb2ef;
+}
+
+/* The classic dark theme inherits every original rule unchanged. */
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) button:not(.flat-btn):not(.view-tab):not(.rail-icon):not(.quick-tool) {
+  background: linear-gradient(var(--theme-button-top), var(--theme-button-bottom));
+  border-color: var(--edge);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) button:hover:not(:disabled) {
+  background: var(--theme-button-hover);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) button.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--theme-selected-text);
+  border-color: var(--accent);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) input,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) select,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) textarea {
+  color: var(--text);
+  background-color: var(--field);
+  border-color: var(--edge);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) select { background: var(--field); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-title,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .dialog-head { background: var(--theme-panel-heading); color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .process-dialog { border-color: var(--edge); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .dialog-body label,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-section > h3,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-script h4,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .printer-empty,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .hint,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .note-banner { color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-ext-tool .meta,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-ext-main > .meta,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .assign-list td small { color: var(--dim); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-tabs button,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-subtabs button {
+  background: var(--bar);
+  color: var(--text);
+  border-color: var(--line);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-tabs button.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-subtabs button.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .help-tabs button.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .row button.active {
+  background: var(--accent);
+  color: var(--theme-selected-text);
+  border-color: var(--accent);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .list-row.selected,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .plate-tab.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .style-card.active {
+  background: var(--accent);
+  color: var(--theme-selected-text);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .list-row.selected small,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .plate-tab.active small { color: var(--theme-selected-text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .view-tab.active { background: var(--theme-tab-selected); border-color: var(--edge); color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .s-row.found { background: var(--theme-focus); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-list-items { border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .pd-section > h3 { border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .auto-menu,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .assign-list th,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .setpoints th,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .effective-table th { background: var(--well); color: var(--text); border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .printer-host { background: var(--well); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .preview-summary { background: var(--well); border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .setpoints.derived { color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .tool-rail { background: var(--theme-rail-bg); border-color: var(--line); scrollbar-color: var(--edge) var(--well); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-icon {
+  background: linear-gradient(140deg,var(--theme-rail-button-top),var(--theme-rail-button-bottom));
+  border-color: var(--edge);
+  color: var(--text);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-icon:hover:not(:disabled) { background: var(--theme-button-hover); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-icon.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-icon[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--theme-selected-text);
+  border-color: var(--accent);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-label { color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .rail-icon.active .rail-label { color: var(--theme-selected-text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .quickbar { background: var(--bar); border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .dock-scroll[data-keep-scroll="dock:supports"] { background: var(--bg); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .dock-scroll[data-keep-scroll="dock:supports"] .d-box { background: var(--well); border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .dock-scroll[data-keep-scroll="dock:supports"] .d-group h4 { color: var(--text); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .job-progress { background: var(--well); border-color: var(--accent); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .job-progress i { background: var(--accent); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .job-progress b { color: var(--text); text-shadow: none; }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .offset-note { color: var(--text); background: var(--theme-focus); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .toast { background: var(--theme-panel-heading); color: var(--text); border-color: var(--line); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .loader { border-color: var(--line); border-top-color: var(--theme-loader); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) ::-webkit-scrollbar-thumb { background: var(--edge); }
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) ::-webkit-scrollbar-track { background: var(--well); }
+
+/* The toolbar keeps its transparent buttons in every theme. */
+:root[data-simpliy-theme] .toolbar button { background: transparent !important; border-color: transparent !important; }
+:root[data-simpliy-theme] .toolbar button:hover:not(:disabled) { background: var(--theme-tab-selected, #454545) !important; border-color: var(--edge) !important; }
+:root[data-simpliy-theme="dark"] .toolbar button:hover:not(:disabled) { background: #454545 !important; }
+
+/* The two alpha.2 UI preferences must look consistent in both color schemes. */
+.simpliy-theme-picker,
+.simpliy-language-select { display: inline-flex; flex: none; align-items: center; gap: 4px; white-space: nowrap; font-size: 12px; color: var(--text); }
+.simpliy-theme-picker select { width: 105px; min-width: 90px; max-width: 105px; height: 23px; padding: 2px 3px; background: var(--field); color: var(--text); border: 1px solid var(--edge); border-radius: 3px; }
+.simpliy-language-select select { background: var(--field) !important; color: var(--text) !important; border-color: var(--edge) !important; }
+:root[data-simpliy-theme] .simpliy-theme-picker select:focus-visible { outline: 2px solid var(--accent); }
+
+/* Aktive Reiter (z. B. Platte 1) in hellen und farbigen Designs lesbar halten */
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) button.active,
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .plate-tab.active {
+  background: var(--accent) !important; border-color: var(--accent) !important; color: var(--theme-selected-text, #fff);
+}
+:root[data-simpliy-theme]:not([data-simpliy-theme="dark"]) .plate-tab.active small { color: var(--theme-selected-text, #fff); }

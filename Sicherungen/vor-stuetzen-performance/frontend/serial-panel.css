@@ -1,0 +1,19 @@
+/* Serielle Maschinenüberwachung, ausschließlich UI. Nutzt Theme-Variablen aus Simpliy. */
+.serial-monitor { display:flex; flex-direction:column; gap:10px; min-width:min(660px,80vw); }
+.serial-monitor .hint { line-height:1.45; }
+.serial-connect-row { display:flex; flex-wrap:wrap; gap:7px; align-items:end; }
+.serial-connect-row label { display:flex; flex-direction:column; gap:4px; flex:1; min-width:160px; }
+.serial-connect-row select { min-width:150px; }
+.serial-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; }
+.serial-summary > div { border:1px solid var(--line); padding:10px; min-width:0; background:var(--well); }
+.serial-summary span { color:var(--dim); display:block; margin-bottom:5px; }
+.serial-summary b { color:var(--text); font-size:13px; overflow-wrap:anywhere; }
+.serial-buttons { display:flex; gap:5px; flex-wrap:wrap; }
+.serial-info { overflow-wrap:anywhere; }
+.serial-info > span:first-child { color:var(--dim); }
+.serial-error { color:var(--bad); white-space:pre-wrap; overflow-wrap:anywhere; }
+.serial-error:empty { display:none; }
+.serial-log-label { color:var(--dim); }
+.serial-log { display:block; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; min-height:110px; max-height:240px; padding:10px; background:var(--well); color:var(--text); border:1px solid var(--line); font:11px/1.5 Consolas,monospace; }
+.serial-monitor .muted { line-height:1.4; }
+@media(max-width:800px){.serial-summary{grid-template-columns:repeat(2,minmax(0,1fr));}.serial-monitor{min-width:0;}}

@@ -1,0 +1,5 @@
+kind: print
+id: simpliy-print
+name: Simpliy
+condition: printer.base_model == "SIMPLIY"
+values: {}

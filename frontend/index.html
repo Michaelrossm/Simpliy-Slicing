@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Simpliy Slicing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="serial-panel.css">
+  <link rel="stylesheet" href="themes.css">
+</head>
+<body>
+  <div id="app"><div class="boot"><div class="loader"></div><h2>Simpliy Slicing</h2><p>wird geladen …</p></div></div>
+  <input id="profile-upload" type="file" accept=".simpliyprofile,.zip,.json,.ini,.cfg" hidden>
+  <script type="importmap">{"imports":{"three":"./vendor/build/three.module.js"}}</script>
+  <script src="tauri-bridge.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

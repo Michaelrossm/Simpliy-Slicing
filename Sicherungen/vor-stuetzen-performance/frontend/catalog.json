@@ -1,0 +1,974 @@
+[
+  {
+    "key": "nozzle_diameter",
+    "label": "Düsendurchmesser",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "0.4",
+    "verified": false
+  },
+  {
+    "key": "extrusion_multiplier",
+    "label": "Extrusionsmultiplikator",
+    "unit": "",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "1",
+    "verified": false
+  },
+  {
+    "key": "extrusion_width",
+    "label": "Extrusionsbreite",
+    "unit": "mm / %",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "0",
+    "verified": false
+  },
+  {
+    "key": "filament_diameter",
+    "label": "Filamentdurchmesser",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "1.75",
+    "verified": false
+  },
+  {
+    "key": "retract_length",
+    "label": "Retract-Länge",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "0.8",
+    "verified": false
+  },
+  {
+    "key": "retract_lift",
+    "label": "Z-Hop beim Retract",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "0.2",
+    "verified": false
+  },
+  {
+    "key": "retract_speed",
+    "label": "Einzugsgeschwindigkeit",
+    "unit": "mm/s",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "35",
+    "verified": false
+  },
+  {
+    "key": "deretract_speed",
+    "label": "Wiedereinzugsgeschwindigkeit",
+    "unit": "mm/s",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "35",
+    "verified": false
+  },
+  {
+    "key": "retract_restart_extra",
+    "label": "Zusätzliche Wiederanlauflänge",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "0",
+    "verified": false
+  },
+  {
+    "key": "wipe",
+    "label": "Düse abwischen",
+    "unit": "",
+    "type": "bool",
+    "tab": "Extruder",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "use_firmware_retraction",
+    "label": "Firmware-Retraction",
+    "unit": "",
+    "type": "bool",
+    "tab": "Extruder",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "retract_before_travel",
+    "label": "Retract ab Bewegung",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Extruder",
+    "example": "2",
+    "verified": false
+  },
+  {
+    "key": "retract_layer_change",
+    "label": "Retract bei Schichtwechsel",
+    "unit": "",
+    "type": "bool",
+    "tab": "Extruder",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "layer_height",
+    "label": "Schichthöhe",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 0.2,
+    "verified": false
+  },
+  {
+    "key": "first_layer_height",
+    "label": "Erste Schichthöhe",
+    "unit": "mm / %",
+    "type": "text",
+    "tab": "Schicht",
+    "example": "0.2",
+    "verified": false
+  },
+  {
+    "key": "perimeters",
+    "label": "Perimeter",
+    "unit": "",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 3,
+    "verified": false
+  },
+  {
+    "key": "top_solid_layers",
+    "label": "Obere massive Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 5,
+    "verified": false
+  },
+  {
+    "key": "bottom_solid_layers",
+    "label": "Untere massive Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 4,
+    "verified": false
+  },
+  {
+    "key": "spiral_vase",
+    "label": "Spiral Vase",
+    "unit": "",
+    "type": "bool",
+    "tab": "Schicht",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "external_perimeters_first",
+    "label": "Äußere Perimeter zuerst",
+    "unit": "",
+    "type": "bool",
+    "tab": "Schicht",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "seam_position",
+    "label": "Nahtposition",
+    "unit": "",
+    "type": "text",
+    "tab": "Schicht",
+    "example": "nearest",
+    "verified": false
+  },
+  {
+    "key": "thin_walls",
+    "label": "Dünne Wände erkennen",
+    "unit": "",
+    "type": "bool",
+    "tab": "Schicht",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "elefant_foot_compensation",
+    "label": "Elefantenfuß-Kompensation",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 0.0,
+    "verified": false
+  },
+  {
+    "key": "xy_size_compensation",
+    "label": "XY-Größenkompensation",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Schicht",
+    "example": 0.0,
+    "verified": false
+  },
+  {
+    "key": "brim_width",
+    "label": "Brim-Breite",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Ergänzungen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "skirts",
+    "label": "Skirt-Schleifen",
+    "unit": "",
+    "type": "number",
+    "tab": "Ergänzungen",
+    "example": 1,
+    "verified": false
+  },
+  {
+    "key": "skirt_distance",
+    "label": "Skirt-Abstand",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Ergänzungen",
+    "example": 6,
+    "verified": false
+  },
+  {
+    "key": "min_skirt_length",
+    "label": "Minimale Skirtlänge",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Ergänzungen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "raft_layers",
+    "label": "Raft-Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Ergänzungen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "draft_shield",
+    "label": "Draft Shield",
+    "unit": "",
+    "type": "text",
+    "tab": "Ergänzungen",
+    "example": "disabled",
+    "verified": false
+  },
+  {
+    "key": "complete_objects",
+    "label": "Objekte nacheinander fertigstellen",
+    "unit": "",
+    "type": "bool",
+    "tab": "Ergänzungen",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "fill_density",
+    "label": "Fülldichte",
+    "unit": "%",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "15%",
+    "verified": false
+  },
+  {
+    "key": "fill_pattern",
+    "label": "Füllmuster",
+    "unit": "",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "gyroid",
+    "verified": false
+  },
+  {
+    "key": "top_fill_pattern",
+    "label": "Oberflächenmuster",
+    "unit": "",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "monotonic",
+    "verified": false
+  },
+  {
+    "key": "bottom_fill_pattern",
+    "label": "Bodenmuster",
+    "unit": "",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "monotonic",
+    "verified": false
+  },
+  {
+    "key": "infill_every_layers",
+    "label": "Infill jede x. Schicht",
+    "unit": "",
+    "type": "number",
+    "tab": "Füllung",
+    "example": 1,
+    "verified": false
+  },
+  {
+    "key": "infill_anchor",
+    "label": "Füllungsanker",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "600%",
+    "verified": false
+  },
+  {
+    "key": "solid_infill_every_layers",
+    "label": "Massives Infill alle x Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Füllung",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "infill_overlap",
+    "label": "Infill-Überlappung",
+    "unit": "%",
+    "type": "text",
+    "tab": "Füllung",
+    "example": "25%",
+    "verified": false
+  },
+  {
+    "key": "support_material",
+    "label": "Prusa-Stützen aktiv",
+    "unit": "",
+    "type": "bool",
+    "tab": "Stützen",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "support_material_auto",
+    "label": "Stützen automatisch",
+    "unit": "",
+    "type": "bool",
+    "tab": "Stützen",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "support_material_style",
+    "label": "Prusa-Stützenstil",
+    "unit": "",
+    "type": "text",
+    "tab": "Stützen",
+    "example": "organic",
+    "verified": false
+  },
+  {
+    "key": "support_material_threshold",
+    "label": "Überhangwinkel",
+    "unit": "°",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 45,
+    "verified": false
+  },
+  {
+    "key": "support_material_pattern",
+    "label": "Stützmuster",
+    "unit": "",
+    "type": "text",
+    "tab": "Stützen",
+    "example": "rectilinear",
+    "verified": false
+  },
+  {
+    "key": "support_material_spacing",
+    "label": "Stützenlinien-Abstand",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 2.5,
+    "verified": false
+  },
+  {
+    "key": "support_material_interface_layers",
+    "label": "Obere Interface-Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 2,
+    "verified": false
+  },
+  {
+    "key": "support_material_bottom_interface_layers",
+    "label": "Untere Interface-Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "support_material_interface_spacing",
+    "label": "Interface-Abstand",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 0.2,
+    "verified": false
+  },
+  {
+    "key": "support_material_contact_distance",
+    "label": "Kontaktabstand",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 0.2,
+    "verified": false
+  },
+  {
+    "key": "support_material_extruder",
+    "label": "Stützen-Extruder",
+    "unit": "",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "support_material_interface_extruder",
+    "label": "Interface-Extruder",
+    "unit": "",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "dont_support_bridges",
+    "label": "Brücken nicht stützen",
+    "unit": "",
+    "type": "bool",
+    "tab": "Stützen",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "support_material_xy_spacing",
+    "label": "XY-Abstand Stützen",
+    "unit": "mm",
+    "type": "text",
+    "tab": "Stützen",
+    "example": "50%",
+    "verified": false
+  },
+  {
+    "key": "simpliy.support_style",
+    "label": "Simpliy-Stützentyp",
+    "unit": "",
+    "type": "text",
+    "tab": "Stützen",
+    "example": "tree",
+    "verified": false
+  },
+  {
+    "key": "simpliy.interface_layers",
+    "label": "Simpliy Kontaktlagen",
+    "unit": "",
+    "type": "number",
+    "tab": "Stützen",
+    "example": 2,
+    "verified": false
+  },
+  {
+    "key": "temperature",
+    "label": "Düsentemperatur",
+    "unit": "°C",
+    "type": "number",
+    "tab": "Temperatur",
+    "example": 215,
+    "verified": false
+  },
+  {
+    "key": "first_layer_temperature",
+    "label": "Düsentemperatur 1. Schicht",
+    "unit": "°C",
+    "type": "number",
+    "tab": "Temperatur",
+    "example": 220,
+    "verified": false
+  },
+  {
+    "key": "bed_temperature",
+    "label": "Betttemperatur",
+    "unit": "°C",
+    "type": "number",
+    "tab": "Temperatur",
+    "example": 60,
+    "verified": false
+  },
+  {
+    "key": "first_layer_bed_temperature",
+    "label": "Betttemperatur 1. Schicht",
+    "unit": "°C",
+    "type": "number",
+    "tab": "Temperatur",
+    "example": 65,
+    "verified": false
+  },
+  {
+    "key": "chamber_temperature",
+    "label": "Kammertemperatur",
+    "unit": "°C",
+    "type": "number",
+    "tab": "Temperatur",
+    "example": 0,
+    "verified": false
+  },
+  {
+    "key": "fan_always_on",
+    "label": "Lüfter immer an",
+    "unit": "",
+    "type": "bool",
+    "tab": "Kühlung",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "cooling",
+    "label": "Automatische Kühlung",
+    "unit": "",
+    "type": "bool",
+    "tab": "Kühlung",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "min_fan_speed",
+    "label": "Min. Lüfter",
+    "unit": "%",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 25,
+    "verified": false
+  },
+  {
+    "key": "max_fan_speed",
+    "label": "Max. Lüfter",
+    "unit": "%",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 100,
+    "verified": false
+  },
+  {
+    "key": "bridge_fan_speed",
+    "label": "Brücken-Lüfter",
+    "unit": "%",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 100,
+    "verified": false
+  },
+  {
+    "key": "disable_fan_first_layers",
+    "label": "Lüfter aus für erste Schichten",
+    "unit": "",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 1,
+    "verified": false
+  },
+  {
+    "key": "slowdown_below_layer_time",
+    "label": "Bei Schichtzeit unter",
+    "unit": "s",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 15,
+    "verified": false
+  },
+  {
+    "key": "min_print_speed",
+    "label": "Minimale Druckgeschwindigkeit",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Kühlung",
+    "example": 15,
+    "verified": false
+  },
+  {
+    "key": "perimeter_speed",
+    "label": "Perimetergeschwindigkeit",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 45,
+    "verified": false
+  },
+  {
+    "key": "external_perimeter_speed",
+    "label": "Äußere Perimeter",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 30,
+    "verified": false
+  },
+  {
+    "key": "small_perimeter_speed",
+    "label": "Kleine Perimeter",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 25,
+    "verified": false
+  },
+  {
+    "key": "infill_speed",
+    "label": "Füllung",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 80,
+    "verified": false
+  },
+  {
+    "key": "solid_infill_speed",
+    "label": "Massive Füllung",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 65,
+    "verified": false
+  },
+  {
+    "key": "top_solid_infill_speed",
+    "label": "Obere Schichten",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 40,
+    "verified": false
+  },
+  {
+    "key": "support_material_speed",
+    "label": "Stützengeschwindigkeit",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 50,
+    "verified": false
+  },
+  {
+    "key": "support_material_interface_speed",
+    "label": "Interface-Geschwindigkeit",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 30,
+    "verified": false
+  },
+  {
+    "key": "bridge_speed",
+    "label": "Brücken",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 30,
+    "verified": false
+  },
+  {
+    "key": "travel_speed",
+    "label": "Verfahren",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 180,
+    "verified": false
+  },
+  {
+    "key": "first_layer_speed",
+    "label": "Geschwindigkeit 1. Schicht",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 25,
+    "verified": false
+  },
+  {
+    "key": "max_print_speed",
+    "label": "Maximale Druckgeschwindigkeit",
+    "unit": "mm/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 150,
+    "verified": false
+  },
+  {
+    "key": "max_volumetric_speed",
+    "label": "Max. Volumenstrom",
+    "unit": "mm³/s",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 15,
+    "verified": false
+  },
+  {
+    "key": "max_acceleration_extruding",
+    "label": "Maximale Extrusionsbeschleunigung",
+    "unit": "mm/s²",
+    "type": "number",
+    "tab": "Geschwindigkeiten",
+    "example": 1200,
+    "verified": false
+  },
+  {
+    "key": "gcode_flavor",
+    "label": "G-Code-Typ",
+    "unit": "",
+    "type": "text",
+    "tab": "Ausgabe",
+    "example": "marlin2",
+    "verified": false
+  },
+  {
+    "key": "output_filename_format",
+    "label": "Dateiname",
+    "unit": "",
+    "type": "text",
+    "tab": "Ausgabe",
+    "example": "{input_filename_base}.gcode",
+    "verified": false
+  },
+  {
+    "key": "thumbnails",
+    "label": "Miniaturbilder",
+    "unit": "",
+    "type": "text",
+    "tab": "Ausgabe",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "use_relative_e_distances",
+    "label": "Relative Extruderwege",
+    "unit": "",
+    "type": "bool",
+    "tab": "Ausgabe",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "gcode_comments",
+    "label": "G-Code-Kommentare",
+    "unit": "",
+    "type": "bool",
+    "tab": "Ausgabe",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "post_process",
+    "label": "Nachbearbeitungsskript",
+    "unit": "",
+    "type": "text",
+    "tab": "Ausgabe",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "start_gcode",
+    "label": "Start-G-Code",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "end_gcode",
+    "label": "End-G-Code",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "before_layer_gcode",
+    "label": "Vor jeder Schicht",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "layer_gcode",
+    "label": "Nach Schichtwechsel",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "toolchange_gcode",
+    "label": "Toolwechsel-G-Code",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "color_change_gcode",
+    "label": "Farbwechsel-G-Code",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Skripte",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "printer_notes",
+    "label": "Druckernotizen",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Andere",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "filament_notes",
+    "label": "Filamentnotizen",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Andere",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "notes",
+    "label": "Profilnotizen",
+    "unit": "",
+    "type": "multiline",
+    "tab": "Andere",
+    "example": "",
+    "verified": false
+  },
+  {
+    "key": "filament_type",
+    "label": "Materialtyp",
+    "unit": "",
+    "type": "text",
+    "tab": "Andere",
+    "example": "PLA",
+    "verified": false
+  },
+  {
+    "key": "filament_colour",
+    "label": "Filamentfarbe",
+    "unit": "",
+    "type": "text",
+    "tab": "Andere",
+    "example": "#FFFFFF",
+    "verified": false
+  },
+  {
+    "key": "filament_max_volumetric_speed",
+    "label": "Filament max. Volumenstrom",
+    "unit": "mm³/s",
+    "type": "number",
+    "tab": "Andere",
+    "example": 12,
+    "verified": false
+  },
+  {
+    "key": "resolution",
+    "label": "Auflösung",
+    "unit": "mm",
+    "type": "number",
+    "tab": "Fortgeschritten",
+    "example": 0.012,
+    "verified": false
+  },
+  {
+    "key": "arc_fitting",
+    "label": "Arc Fitting",
+    "unit": "",
+    "type": "text",
+    "tab": "Fortgeschritten",
+    "example": "disabled",
+    "verified": false
+  },
+  {
+    "key": "gap_fill_enabled",
+    "label": "Gap Fill",
+    "unit": "",
+    "type": "bool",
+    "tab": "Fortgeschritten",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "detect_overhang_wall",
+    "label": "Überhangwände erkennen",
+    "unit": "",
+    "type": "bool",
+    "tab": "Fortgeschritten",
+    "example": true,
+    "verified": false
+  },
+  {
+    "key": "avoid_crossing_perimeters",
+    "label": "Perimeterkreuzung vermeiden",
+    "unit": "",
+    "type": "bool",
+    "tab": "Fortgeschritten",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "variable_layer_height",
+    "label": "Variable Schichthöhe",
+    "unit": "",
+    "type": "bool",
+    "tab": "Fortgeschritten",
+    "example": false,
+    "verified": false
+  },
+  {
+    "key": "extrusion_axis",
+    "label": "Extruderachse",
+    "unit": "",
+    "type": "text",
+    "tab": "Fortgeschritten",
+    "example": "E",
+    "verified": false
+  },
+  {
+    "key": "machine_max_acceleration_x",
+    "label": "Max. X-Beschleunigung",
+    "unit": "mm/s²",
+    "type": "number",
+    "tab": "Fortgeschritten",
+    "example": 1000,
+    "verified": false
+  }
+]
